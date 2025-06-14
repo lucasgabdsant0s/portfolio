@@ -1,55 +1,67 @@
-import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState, useEffect } from 'react';
 
 const Contact = () => {
-  const form = useRef();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('');
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  // Verificar se houve envio bem-sucedido
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('sent') === 'true') {
+      setShowSuccessMessage(true);
+      // Remover o parâmetro da URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+      
+      // Ocultar mensagem após 10 segundos
+      setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 10000);
+    }
+  }, []);
+
+  // Função para formatar nome (capitalizar primeira letra de cada palavra)
+  const formatName = (name) => {
+    return name.replace(/\b\w/g, (char) => char.toUpperCase());
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('');
-    
-    try {
-      // Configuração do EmailJS - você precisará criar uma conta em emailjs.com
-      const result = await emailjs.sendForm(
-        'service_portfolio', // Service ID (você criará no EmailJS)
-        'template_contact', // Template ID (você criará no EmailJS) 
-        form.current,
-        'seu_user_id_aqui' // User ID (você obterá no EmailJS)
-      );
-
-      console.log('Email enviado com sucesso:', result.text);
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Erro ao enviar email:', error);
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
+  // Função para formatar telefone brasileiro
+  const formatPhone = (phone) => {
+    const numbers = phone.replace(/\D/g, '');
+    if (numbers.length <= 11) {
+      return numbers.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
     }
+    return phone;
+  };
+
+  // Função para validar email
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Manipuladores de eventos com formatação
+  const handleNameChange = (e) => {
+    e.target.value = formatName(e.target.value);
+  };
+
+  const handlePhoneChange = (e) => {
+    e.target.value = formatPhone(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    const email = e.target.value.toLowerCase();
+    e.target.value = email;
+    
+    // Validação visual
+    if (email && !isValidEmail(email)) {
+      e.target.style.borderColor = '#ef4444';
+    } else {
+      e.target.style.borderColor = '#d1d5db';
+    }
+  };
+
+  const handleSubmit = (e) => {
+    setIsSubmitting(true);
   };
 
   const contactInfo = [
@@ -150,13 +162,25 @@ const Contact = () => {
               Envie uma Mensagem
             </h3>
 
-            {submitStatus === 'success' && (
-              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-                <strong>Sucesso!</strong> Sua mensagem foi enviada. Retornarei em breve!
+            {/* Success Message */}
+            {showSuccessMessage && (
+              <div className="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg mb-6 animate-pulse">
+                <div className="flex items-center">
+                  <span className="text-2xl mr-3">✅</span>
+                  <div>
+                    <strong>Agradeço pelo envio!</strong>
+                    <p className="mt-1">Te retornarei o mais rápido possível.</p>
+                  </div>
+                </div>
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              action="https://formsubmit.co/lucasgabdsantos@gmail.com" 
+              method="POST" 
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
@@ -166,8 +190,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    onInput={handleNameChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                     placeholder="Seu nome completo"
@@ -181,8 +204,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    onInput={handleEmailChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                     placeholder="seu@email.com"
@@ -199,8 +221,8 @@ const Contact = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
+                    onInput={handlePhoneChange}
+                    maxLength="15"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                     placeholder="(11) 99999-9999"
                   />
@@ -212,14 +234,13 @@ const Contact = () => {
                   <select
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
                   >
                     <option value="">Selecione um assunto</option>
                     <option value="website">Desenvolvimento de Website</option>
                     <option value="api">API/Backend</option>
+                    <option value="manutencao">Manutenção de Sistema</option>
                     <option value="other">Outro</option>
                   </select>
                 </div>
@@ -232,8 +253,6 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   required
                   rows="6"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
@@ -241,28 +260,30 @@ const Contact = () => {
                 ></textarea>
               </div>
 
+              {/* FormSubmit hidden fields */}
+              <input type="hidden" name="_next" value={`${window.location.origin}${window.location.pathname}?sent=true#contato`} />
+              <input type="hidden" name="_subject" value="Nova mensagem do Portfolio!" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="text" name="_honey" style={{display: 'none'}} />
+
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${
-                  isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
+                  isSubmitting 
+                    ? 'bg-gray-400 cursor-not-allowed' 
                     : 'bg-primary hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-1'
                 }`}
               >
-                {isSubmitting ? (
-                  <span className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Enviando...
-                  </span>
-                ) : (
-                  'Enviar Mensagem'
-                )}
+                {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
               </button>
             </form>
+
+            <div className="mt-6 text-center">
+              <p className="text-sm text-gray-500">
+                Seus dados são protegidos e nunca serão compartilhados com terceiros.
+              </p>
+            </div>
           </div>
         </div>
       </div>
