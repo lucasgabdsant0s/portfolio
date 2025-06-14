@@ -67,28 +67,7 @@ Design de interfaces modernas e experiência do usuário otimizada.
 - Usabilidade
 - Acessibilidade
 
-## 🎯 Projetos em Destaque
-
-### 🛒 Evollusom
-Sistema completo de **loja de acessórios automotivos** com site institucional e dashboard de controle de vendas.
-- **Tecnologias:** HTML, CSS, PHP, MySQL, JavaScript, Bootstrap
-- **Categoria:** Web Application
-
-### 📊 Sistema de Gestão Escolar
-Sistema completo com Frontend e Backend de gestão escolar com controle de alunos, cursos, funcionários, relatórios e dashboard.
-- **Tecnologias:** PHP, HTML, CSS, MySQL, Bootstrap
-- **Categoria:** Web Application
-
-### 🎨 Portfolio Criativo
-Site portfolio para artista visual com galeria interativa, animações suaves e design responsivo.
-- **Tecnologias:** React, Framer Motion, Tailwind, Netlify
-- **Categoria:** Design & Frontend
-
-### 🔗 API RESTful
-API robusta para sistema de blog com autenticação JWT, upload de imagens e sistema de comentários.
-- **Tecnologias:** Express.js, MongoDB, JWT, Cloudinary
-- **Categoria:** Backend
-
+  
 ## 🛠️ Como Executar Este Projeto
 
 ### Pré-requisitos
@@ -100,7 +79,7 @@ npm ou yarn
 ### Instalação e Execução
 ```bash
 # Clone o repositório
-git clone <url-do-repositorio>
+git clone https://github.com/purpesy/portfolio.git
 cd portfolio
 
 # Instale as dependências
@@ -111,22 +90,6 @@ npm start
 
 # Acesse http://localhost:3000
 ```
-
-### Build para Produção
-```bash
-# Gera os arquivos otimizados na pasta build/
-npm run build
-
-# Para deployment automatizado
-./deploy.bat
-```
-
-## 🌐 Deploy e Hospedagem
-
-Este projeto inclui scripts e guias para deploy via FTP:
-- **`deploy.bat`** - Script automático de build
-- **`GUIA_FTP.md`** - Guia completo para upload
-- **Arquivos prontos** na pasta `build/`
 
 ## 📞 Contato
 
@@ -175,15 +138,6 @@ src/
 ├── index.css         # Estilos globais
 └── index.js          # Ponto de entrada
 ```
-
-## 🎯 Próximos Passos
-
-- [ ] Implementar blog integrado
-- [ ] Adicionar modo escuro/claro
-- [ ] Integrar com CMS
-- [ ] Implementar PWA
-- [ ] Adicionar testes automatizados
-- [ ] Integrar com Google Analytics
 
 ## 📄 Licença
 
