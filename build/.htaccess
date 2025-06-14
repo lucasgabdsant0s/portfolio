@@ -1,0 +1,14 @@
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
+
+# Cache Control
+<filesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg)$">
+  ExpiresActive on
+  ExpiresDefault "access plus 1 month"
+</filesMatch>
+
+# MIME Types
+AddType text/css .css
+AddType application/javascript .js 

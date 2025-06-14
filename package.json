@@ -2,8 +2,10 @@
   "name": "freelancer-portfolio",
   "version": "1.0.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@csstools/normalize.css": "^12.1.1",
+    "@emailjs/browser": "^4.4.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "^5.0.1",

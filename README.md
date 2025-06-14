@@ -1,176 +1,196 @@
-# Portfolio de Programador Freelancer
+# 💼 Portfólio - Lucas Gabriel | Desenvolvedor Full Stack
 
-## 🚀 Sobre o Projeto
+## 👨‍💻 Sobre Mim
 
-Esta é uma landing page completa e moderna para um programador freelancer, desenvolvida com React.js e Tailwind CSS. O site apresenta uma interface elegante, responsiva e profissional, perfeita para mostrar serviços, habilidades e projetos.
+Olá, eu sou **Lucas Gabriel**, um desenvolvedor Full Stack apaixonado por tecnologia e com experiência em projetos reais. Meu objetivo é transformar ideias em soluções digitais funcionais, com foco em performance, usabilidade e código limpo.
 
-## ✨ Características
+Tenho paixão por resolver problemas, aprender constantemente e construir produtos que realmente ajudam pessoas e negócios. Estou em busca de oportunidades para crescer como profissional e contribuir com projetos desafiadores.
 
-- **Design Moderno**: Interface limpa e profissional com gradientes e animações suaves
-- **Totalmente Responsivo**: Funciona perfeitamente em todos os dispositivos
-- **Componentes Reutilizáveis**: Arquitetura React bem estruturada
-- **Tailwind CSS**: Styling moderno e eficiente
-- **Animações**: Transições suaves e micro-interações
-- **SEO Otimizado**: Meta tags e estrutura adequada
+### 📊 Estatísticas
+- **10+** Projetos Concluídos
+- **1+** Anos de Experiência
+- **6+** Tecnologias Dominadas
+- **100%** Dedicação e Suporte
 
-## 🛠️ Tecnologias Utilizadas
+## 🚀 Tecnologias & Habilidades
 
-- React.js 18+
-- Tailwind CSS 3
-- CSS3 com animações customizadas
-- HTML5 semântico
-- JavaScript ES6+
+### Frontend
+- **React.js** - 90% | ⚛️
+- **JavaScript** - 90% | 🟨
+- **TypeScript** - 60% | 🔷
+- **Tailwind CSS** - 90% | 🎨
+- **HTML5/CSS3** - 95% | 🌐
 
-## 📋 Seções do Site
+### Backend
+- **Node.js** - 95% | 🟢
+- **MySQL** - 95% | 🔗
+- **Express.js** - 88% | ⚡
+- **MongoDB** - 85% | 🍃
+- **PostgreSQL** - 80% | 🐘
+- **Java** - 30% | 🐍
 
-### 1. Header (Navegação)
-- Navegação fixa com efeito de scroll
-- Menu responsivo para mobile
-- Transições suaves
+### Ferramentas & DevOps
+- **Git/GitHub** - 95% | 🐙
+- **Figma** - 84% | 🎨
+- **FTP** - 75% | ☁️
+- **CI/CD** - 65% | 🔄
+- **Docker** - 50% | 🐳
 
-### 2. Hero Section
-- Apresentação principal com call-to-action
-- Animações de partículas
-- Stack tecnológico visual
+### Outras Competências
+- 🚀 **Performance** - Otimização e velocidade
+- 📱 **Responsivo** - Design adaptável
+- 🔒 **Segurança** - Práticas seguras
+- 🧪 **Testing** - Testes automatizados
+- ⚡ **API REST** - Integração de sistemas
+- 🎯 **UX/UI** - Experiência do usuário
 
-### 3. Sobre Mim
-- Informações pessoais e profissionais
-- Métricas de sucesso
-- Foto de perfil estilizada
+## 💼 Serviços Oferecidos
 
-### 4. Serviços
-- Grid de serviços oferecidos
-- Cards interativos com hover effects
-- Call-to-action para orçamento
+### 🌐 Desenvolvimento Web
+Criação de sites e aplicações web modernas, responsivas e otimizadas para todos os dispositivos.
+- Design Responsivo
+- SEO Otimizado
+- Performance Alta
+- Cross-browser
 
-### 5. Habilidades
-- Barras de progresso animadas
-- Categorização por tecnologia
-- Competências adicionais
+### 🛠️ Backend & APIs
+Desenvolvimento de APIs robustas e escaláveis para alimentar suas aplicações.
+- RESTful APIs
+- GraphQL
+- Banco de Dados
+- Microserviços
 
-### 6. Portfolio
-- Filtro por categoria de projetos
-- Cards de projetos com preview
-- Links para demonstração e código
+### 🎨 UI/UX Design
+Design de interfaces modernas e experiência do usuário otimizada.
+- Prototipagem
+- Design System
+- Usabilidade
+- Acessibilidade
 
-### 7. Depoimentos
-- Carousel automático de testimonials
-- Navegação manual
-- Cards de preview dos clientes
+## 🎯 Projetos em Destaque
 
-### 8. Contato
-- Formulário funcional com validação
-- Informações de contato
-- Links para redes sociais
+### 🛒 Evollusom
+Sistema completo de **loja de acessórios automotivos** com site institucional e dashboard de controle de vendas.
+- **Tecnologias:** HTML, CSS, PHP, MySQL, JavaScript, Bootstrap
+- **Categoria:** Web Application
 
-### 9. Footer
-- Links rápidos e informações
-- Newsletter signup
-- Copyright e créditos
+### 📊 Sistema de Gestão Escolar
+Sistema completo com Frontend e Backend de gestão escolar com controle de alunos, cursos, funcionários, relatórios e dashboard.
+- **Tecnologias:** PHP, HTML, CSS, MySQL, Bootstrap
+- **Categoria:** Web Application
 
-## 🚀 Como Executar
+### 🎨 Portfolio Criativo
+Site portfolio para artista visual com galeria interativa, animações suaves e design responsivo.
+- **Tecnologias:** React, Framer Motion, Tailwind, Netlify
+- **Categoria:** Design & Frontend
+
+### 🔗 API RESTful
+API robusta para sistema de blog com autenticação JWT, upload de imagens e sistema de comentários.
+- **Tecnologias:** Express.js, MongoDB, JWT, Cloudinary
+- **Categoria:** Backend
+
+## 🛠️ Como Executar Este Projeto
 
 ### Pré-requisitos
-- Node.js 16+ instalado
-- npm ou yarn
-
-### Instalação
-
-1. Clone o repositório:
 ```bash
+Node.js 16+
+npm ou yarn
+```
+
+### Instalação e Execução
+```bash
+# Clone o repositório
 git clone <url-do-repositorio>
-cd freelancer-portfolio
-```
+cd portfolio
 
-2. Instale as dependências:
-```bash
+# Instale as dependências
 npm install
-```
 
-3. Execute o projeto:
-```bash
+# Execute o projeto
 npm start
+
+# Acesse http://localhost:3000
 ```
 
-4. Abra [http://localhost:3000](http://localhost:3000) no navegador
-
-## 📦 Build para Produção
-
+### Build para Produção
 ```bash
+# Gera os arquivos otimizados na pasta build/
 npm run build
+
+# Para deployment automatizado
+./deploy.bat
 ```
 
-Este comando criará uma versão otimizada na pasta `build/`.
+## 🌐 Deploy e Hospedagem
 
-## 🎨 Personalização
+Este projeto inclui scripts e guias para deploy via FTP:
+- **`deploy.bat`** - Script automático de build
+- **`GUIA_FTP.md`** - Guia completo para upload
+- **Arquivos prontos** na pasta `build/`
 
-### Cores
-As cores principais podem ser alteradas no arquivo `tailwind.config.js`:
+## 📞 Contato
 
-```javascript
-theme: {
-  extend: {
-    colors: {
-      primary: '#1e40af',    // Azul principal
-      secondary: '#64748b',  // Cinza secundário
-      accent: '#f59e0b',     // Amarelo de destaque
-    }
-  }
-}
+### 📧 Email Principal
+**lucasgabdsantos@gmail.com**
+
+### 📱 Telefone/WhatsApp
+**+55 (11) 97713-4857**
+
+### 📍 Localização
+**São Paulo, SP - Brasil**
+
+### 🔗 Redes Sociais
+- **LinkedIn:** [/in/lucas-dev-gabriel](https://linkedin.com/in/lucas-dev-gabriel/)
+- **GitHub:** [/purpesy](https://github.com/purpesy/)
+
+## 🎨 Funcionalidades do Site
+
+- [x] **Design responsivo** para todos os dispositivos
+- [x] **Navegação suave** entre seções com animações
+- [x] **Formulário de contato** funcional com validação
+- [x] **Portfolio filtrado** por categorias
+- [x] **Barras de progresso** animadas para habilidades
+- [x] **Cards interativos** com hover effects
+- [x] **Testimonials carousel** automático
+- [x] **Scroll to top** button
+- [x] **Menu mobile** hamburger
+- [x] **Gradientes e animações** modernas
+
+## ⚙️ Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── Header.js      # Navegação principal
+│   ├── Hero.js        # Seção de apresentação
+│   ├── About.js       # Sobre mim
+│   ├── Services.js    # Serviços oferecidos
+│   ├── Skills.js      # Habilidades técnicas
+│   ├── Portfolio.js   # Projetos realizados
+│   ├── Testimonials.js# Depoimentos de clientes
+│   ├── Contact.js     # Formulário e contatos
+│   └── Footer.js      # Rodapé com links
+├── App.js            # Componente principal
+├── App.css           # Estilos customizados
+├── index.css         # Estilos globais
+└── index.js          # Ponto de entrada
 ```
 
-### Conteúdo
-- Edite os arquivos de componentes em `src/components/`
-- Modifique textos, imagens e informações pessoais
-- Adicione ou remova seções conforme necessário
+## 🎯 Próximos Passos
 
-### Imagens
-- Adicione suas imagens na pasta `public/images/`
-- Atualize os caminhos nos componentes
-
-## 📱 Responsividade
-
-O site é totalmente responsivo com breakpoints:
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
-
-## 🔧 Funcionalidades
-
-- [x] Design responsivo
-- [x] Navegação suave entre seções
-- [x] Formulário de contato funcional
-- [x] Filtro de portfolio
-- [x] Carousel de depoimentos
-- [x] Animações e transições
-- [x] Botão scroll-to-top
-- [x] Menu mobile hamburger
-
-## 📈 Performance
-
-- Componentes otimizados
-- Lazy loading de imagens
-- CSS minificado em produção
-- JavaScript bundle otimizado
-
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+- [ ] Implementar blog integrado
+- [ ] Adicionar modo escuro/claro
+- [ ] Integrar com CMS
+- [ ] Implementar PWA
+- [ ] Adicionar testes automatizados
+- [ ] Integrar com Google Analytics
 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
-## 📞 Contato
-
-João Silva - [joao.silva@email.com](mailto:joao.silva@email.com)
-
-Link do Projeto: [https://github.com/usuario/freelancer-portfolio](https://github.com/usuario/freelancer-portfolio)
-
 ---
 
-⭐ Se você gostou do projeto, não esqueça de dar uma estrela no repositório! 
+💡 **Interessado em trabalhar comigo?** Entre em contato através dos canais acima ou visite meu [LinkedIn](https://linkedin.com/in/lucas-dev-gabriel/) para saber mais!
+
+⭐ **Gostou do projeto?** Considere dar uma estrela no repositório! 

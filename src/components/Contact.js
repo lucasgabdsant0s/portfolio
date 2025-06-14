@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,11 +24,19 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('');
     
-    // Simulação de envio de formulário
-    setTimeout(() => {
+    try {
+      // Configuração do EmailJS - você precisará criar uma conta em emailjs.com
+      const result = await emailjs.sendForm(
+        'service_portfolio', // Service ID (você criará no EmailJS)
+        'template_contact', // Template ID (você criará no EmailJS) 
+        form.current,
+        'seu_user_id_aqui' // User ID (você obterá no EmailJS)
+      );
+
+      console.log('Email enviado com sucesso:', result.text);
       setSubmitStatus('success');
-      setIsSubmitting(false);
       setFormData({
         name: '',
         email: '',
@@ -34,7 +44,12 @@ const Contact = () => {
         subject: '',
         message: ''
       });
-    }, 2000);
+    } catch (error) {
+      console.error('Erro ao enviar email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
