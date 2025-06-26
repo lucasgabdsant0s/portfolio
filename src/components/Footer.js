@@ -12,9 +12,7 @@ const Footer = () => {
 
   const services = [
     { name: 'Desenvolvimento Web', href: '#serviços' },
-    { name: 'Backend & APIs', href: '#serviços' },
-    { name: 'UI/UX Design', href: '#serviços' },
-    { name: 'Consultoria Tech', href: '#serviços' }
+    { name: 'Backend & APIs', href: '#serviços' }
   ];
 
   const socialLinks = [
@@ -41,7 +39,7 @@ const Footer = () => {
               <h3 className="text-3xl font-bold text-gradient mb-4">Lucas Gabriel</h3>
               <p className="text-secondary leading-relaxed text-lg">
                 Desenvolvedor Full Stack apaixonado por criar 
-                <span className="text-accent font-semibold"> soluções digitais inovadoras</span> 
+                <span className="text-accent font-semibold"> sistemas inovadores </span> 
                 que transformam ideias em realidade.
               </p>
             </div>
@@ -120,23 +118,6 @@ const Footer = () => {
               <span>🌐</span>
               Conecte-se
             </h4>
-            
-            {/* Newsletter */}
-            <div className="mb-8">
-              <p className="text-secondary text-sm mb-4">
-                Receba dicas e novidades sobre desenvolvimento web!
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Seu email"
-                  className="flex-1 px-4 py-3 bg-bg-primary bg-opacity-50 border border-border-color rounded-l-lg focus:outline-none focus:border-accent transition-colors duration-300 text-white placeholder-muted backdrop-blur-sm"
-                />
-                <button className="bg-gradient-to-r from-accent-blue to-accent-purple hover:from-accent-purple hover:to-accent-green px-6 py-3 rounded-r-lg transition-all duration-300 font-semibold hover:scale-105">
-                  <span>OK</span>
-                </button>
-              </div>
-            </div>
 
             {/* Social Links */}
             <div>

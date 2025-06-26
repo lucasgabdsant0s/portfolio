@@ -119,7 +119,7 @@ const Skills = () => {
                 { icon: '🚀', title: 'Performance', desc: 'Otimização e velocidade', color: 'from-accent-blue to-accent-purple' },
                 { icon: '📱', title: 'Responsivo', desc: 'Design adaptável', color: 'from-accent-purple to-accent-green' },
                 { icon: '🔒', title: 'Segurança', desc: 'Práticas seguras', color: 'from-accent-green to-accent-blue' },
-                { icon: '🧪', title: 'Testing', desc: 'Testes automatizados', color: 'from-accent-blue to-accent-green' },
+                { icon: '🧪', title: 'Testing', desc: 'Testes unitários', color: 'from-accent-blue to-accent-green' },
                 { icon: '⚡', title: 'API REST', desc: 'Integração de sistemas', color: 'from-accent-purple to-accent-blue' },
                 { icon: '🎯', title: 'UX/UI', desc: 'Experiência do usuário', color: 'from-accent-green to-accent-purple' }
               ].map((item, index) => (
@@ -150,8 +150,8 @@ const Skills = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               {[
                 { title: 'Estudando Atualmente', items: ['Node.js', 'TypeScript', 'Java'], icon: '📚' },
-                { title: 'Próximos Objetivos', items: ['Architecture', 'AWS', 'GraphQL'], icon: '🎯' },
-                { title: 'Interesses', items: ['Spring Boot', 'DevOps', 'Docker'], icon: '🔮' }
+                { title: 'Próximos Objetivos', items: ['Architecture', 'Segurança', 'Spring Boot'], icon: '🎯' },
+                { title: 'Interesses', items: ['AWS', 'DevOps', 'Docker'], icon: '🔮' }
               ].map((section, index) => (
                 <div key={index} className="card bg-opacity-50 hover:bg-opacity-70 transition-all duration-300">
                   <div className="text-3xl mb-4">{section.icon}</div>

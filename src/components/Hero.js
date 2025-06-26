@@ -25,7 +25,7 @@ const Hero = () => {
             {/* Greeting */}
             <div className="mb-8">
               <span className="inline-block px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-accent border border-white border-opacity-20 text-sm font-medium mb-6">
-                👋 Bem-vindo ao meu universo digital
+                👋 Bem-vindo ao meu portfólio
               </span>
             </div>
 
@@ -35,9 +35,9 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
-              Desenvolvedor Full Stack especializado em criar 
-              <span className="text-accent font-semibold"> soluções web modernas</span> e eficientes. 
-              Transformo ideias em realidade digital com código limpo e design impecável.
+              <bold>Desenvolvedor Full Stack</bold> especializado em criar 
+              <span className="text-accent font-semibold"> sistemas web e APIs Restful. </span>
+              Estou em busca de projetos e oportunidades para colocar minhas habilidades em prática.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">

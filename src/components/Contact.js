@@ -122,11 +122,11 @@ const Contact = () => {
                 </span>
               </div>
               <h3 className="text-3xl font-bold text-white mb-6">
-                Transforme Sua <span className="text-gradient">Ideia</span> em Realidade
+                Está precisando de um dev? me contate!
               </h3>
               <p className="text-secondary leading-relaxed mb-8 text-lg">
-                Estou sempre aberto a discutir novos projetos, oportunidades criativas 
-                ou parcerias. Se você tem uma ideia em mente, não hesite em entrar em contato!
+                Estou sempre aberto a discutir novos projetos, oportunidades 
+                ou parcerias. Se você tem uma oportunidade em mente, não hesite em entrar em contato!
               </p>
             </div>
 
@@ -178,8 +178,7 @@ const Contact = () => {
             <div className="grid grid-cols-3 gap-4">
               {[
                 { number: '24h', label: 'Tempo de Resposta' },
-                { number: '100%', label: 'Satisfação' },
-                { number: '10+', label: 'Projetos Entregues' }
+                { number: '100%', label: 'Satisfação' }
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl font-bold text-gradient">{stat.number}</div>
@@ -226,7 +225,7 @@ const Contact = () => {
                     name="name"
                     onInput={handleNameChange}
                     required
-                    className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-black placeholder-muted backdrop-blur-sm"
                     placeholder="Seu nome completo"
                   />
                 </div>
@@ -240,7 +239,7 @@ const Contact = () => {
                     name="email"
                     onInput={handleEmailChange}
                     required
-                    className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-black placeholder-muted backdrop-blur-sm"
                     placeholder="seu@email.com"
                   />
                 </div>
@@ -255,7 +254,7 @@ const Contact = () => {
                   id="phone"
                   name="phone"
                   onInput={handlePhoneChange}
-                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm"
+                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-black placeholder-muted backdrop-blur-sm"
                   placeholder="(11) 99999-9999"
                 />
               </div>
@@ -269,7 +268,7 @@ const Contact = () => {
                   id="subject"
                   name="subject"
                   required
-                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm"
+                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-black placeholder-muted backdrop-blur-sm"
                   placeholder="Sobre o que você gostaria de conversar?"
                 />
               </div>
@@ -283,7 +282,7 @@ const Contact = () => {
                   name="message"
                   rows="5"
                   required
-                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm resize-none"
+                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-black placeholder-muted backdrop-blur-sm resize-none"
                   placeholder="Descreva seu projeto ou dúvida em detalhes..."
                 ></textarea>
               </div>

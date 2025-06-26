@@ -2,9 +2,9 @@ import React from "react";
 
 const About = () => {
   const stats = [
-    { number: "10+", label: "Projetos Concluídos", icon: "🚀" },
+    { number: "5+", label: "Projetos Concluídos", icon: "🚀" },
     { number: "1+", label: "Anos de Experiência", icon: "⏱️" },
-    { number: "6+", label: "Tecnologias Dominadas", icon: "💻" },
+    { number: "5+", label: "Tecnologias Dominadas", icon: "💻" },
     { number: "100%", label: "Dedicação e Suporte", icon: "🎯" }
   ];
 

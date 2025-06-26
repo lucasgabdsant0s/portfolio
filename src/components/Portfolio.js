@@ -20,7 +20,7 @@ const Portfolio = () => {
       title: 'Sistema de Gestão Escolar',
       category: 'web',
       description: 'Sistema completo com Frontend e Backend de gestão escolar com controle de alunos, cursos, funcionários, com relatórios e dashboard.',
-      technologies: ['PHP', 'HTML', 'CSS', 'MySQL', 'Bootstrap'],
+      technologies: ['PHP', 'HTML', 'CSS', 'MySQL','JavaScript', 'Bootstrap'],
       image: '📊',
       gradient: 'from-accent-purple to-accent-green',
       link: '#',
@@ -28,21 +28,10 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: 'Portfolio Criativo',
-      category: 'design',
-      description: 'Site portfolio para artista visual com galeria interativa, animações suaves e design responsivo.',
-      technologies: ['React', 'Framer Motion', 'Tailwind', 'Netlify'],
-      image: '🎨',
-      gradient: 'from-accent-green to-accent-blue',
-      link: '#',
-      github: '#'
-    },
-    {
-      id: 4,
       title: 'API RESTful',
       category: 'backend',
-      description: 'API robusta para sistema de blog com autenticação JWT, upload de imagens e sistema de comentários.',
-      technologies: ['Express.js', 'MongoDB', 'JWT', 'Cloudinary'],
+      description: 'API robusta para controle de agendamento de um serviço com login de usuario e recuperação de senha, permissões de Admin, CRUD de usuarios, serviços e agendamentos.',
+      technologies: ['Express.js', 'MySQL', 'JWT', 'bcrypto'],
       image: '🔗',
       gradient: 'from-accent-blue to-accent-green',
       link: '#',
@@ -53,8 +42,7 @@ const Portfolio = () => {
   const categories = [
     { id: 'todos', name: 'Todos', icon: '🌟' },
     { id: 'web', name: 'Web Apps', icon: '🌐' },
-    { id: 'backend', name: 'Backend', icon: '⚙️' },
-    { id: 'design', name: 'Design', icon: '🎨' }
+    { id: 'backend', name: 'Backend', icon: '⚙️' }
   ];
 
   const filteredProjects = activeFilter === 'todos' 
@@ -75,7 +63,7 @@ const Portfolio = () => {
         
         <p className="text-center text-secondary max-w-3xl mx-auto mb-12 text-lg fade-in-up">
           Uma seleção dos meus <span className="text-accent font-semibold">projetos mais recentes</span>, demonstrando a versatilidade e qualidade 
-          das soluções que desenvolvo para meus clientes.
+          das soluções que desenvolvo.
         </p>
 
         {/* Filter Buttons */}
@@ -211,7 +199,7 @@ const Portfolio = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               {[
                 { icon: '🚀', title: 'Em Breve', desc: 'Novos projetos chegando', color: 'from-accent-blue to-accent-purple' },
-                { icon: '💡', title: 'Ideias', desc: 'Sempre explorando conceitos', color: 'from-accent-purple to-accent-green' },
+                { icon: '💡', title: 'Ideias', desc: 'Sempre explorando conceitos novos', color: 'from-accent-purple to-accent-green' },
                 { icon: '🤝', title: 'Colaborações', desc: 'Aberto para parcerias', color: 'from-accent-green to-accent-blue' }
               ].map((item, index) => (
                 <div key={index} className="card hover:scale-105 transition-all duration-300 text-center">
@@ -235,7 +223,7 @@ const Portfolio = () => {
                 </span>
               </a>
               <a
-                href="https://github.com/lucasgabriel" 
+                href="https://github.com/purpesy" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary hover:scale-105 transition-transform duration-300"

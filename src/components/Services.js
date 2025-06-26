@@ -34,7 +34,7 @@ const Services = () => {
       description:
         "Implantação e integração de sistemas com foco em escalabilidade, versionamento e organização do código.",
       features: [
-        "Deploy com Render e Vercel",
+        "Deploy via FTP e Vercel",
         "Controle de Versão com Git/GitHub",
         "Documentação com Swagger",
         "Ambientes Separados",
@@ -101,15 +101,6 @@ const Services = () => {
                   </div>
                 ))}
               </div>
-
-              {/* CTA Button */}
-              <div className="mt-auto">
-                <button
-                  className={`w-full bg-gradient-to-r ${service.gradient} bg-opacity-10 hover:bg-opacity-20 text-accent border border-accent border-opacity-30 hover:border-opacity-60 font-semibold py-3 px-4 rounded-lg transition-all duration-300 hover:scale-105`}
-                >
-                  Saiba Mais
-                </button>
-              </div>
             </div>
           ))}
         </div>
@@ -170,7 +161,7 @@ const Services = () => {
             {[
               {
                 step: "01",
-                title: "Análise",
+                title: "Briefing",
                 desc: "Entendimento completo do projeto",
                 icon: "🔍",
               },
@@ -189,7 +180,7 @@ const Services = () => {
               {
                 step: "04",
                 title: "Entrega",
-                desc: "Deploy e acompanhamento",
+                desc: "Deploy e manutenção",
                 icon: "🚀",
               },
             ].map((item, index) => (
