@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const fullText = 'Lucas Gabriel';
+
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timer = setTimeout(() => {
+        setDisplayedText(prev => prev + fullText[currentIndex]);
+        setCurrentIndex(currentIndex + 1);
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, fullText]);
+
   return (
     <section id="início" className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
@@ -23,7 +37,7 @@ const Hero = () => {
           {/* Main content */}
           <div className="fade-in-up">
             {/* Greeting */}
-            <div className="mb-8">
+            <div className="mb-10">
               <span className="inline-block px-4 py-2 bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-accent border border-white border-opacity-20 text-sm font-medium mb-6">
                 👋 Bem-vindo ao meu portfólio
               </span>
@@ -31,7 +45,10 @@ const Hero = () => {
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
               Olá, eu sou
-              <span className="block text-gradient mt-2">Lucas Gabriel</span>
+              <span className="block text-gradient mt-2">
+                {displayedText}
+                <span className="animate-pulse">|</span>
+              </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -51,12 +68,13 @@ const Hero = () => {
                 </span>
               </a>
               <a
-                href="#portfolio"
-                className="btn-secondary px-10 py-4 text-lg font-semibold"
+                href="./Curriculo_Lucas_Gabriel (2).pdf"
+                download="Curriculo_Lucas_Gabriel.pdf"
+                className="btn-secondary px-10 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
               >
                 <span className="flex items-center gap-2">
-                  <span>Ver Projetos</span>
-                  <span className="text-lg">📁</span>
+                  <span>Download CV</span>
+                  <span className="text-lg">📄</span>
                 </span>
               </a>
             </div>
@@ -83,13 +101,18 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-accent border-opacity-60 rounded-full flex justify-center p-1">
-          <div className="w-1 h-3 bg-accent rounded-full animate-pulse"></div>
+      {/* Enhanced Scroll indicator */}
+      <a 
+        href="#sobre"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer group"
+      >
+        <div className="w-8 h-12 border-2 border-accent border-opacity-60 rounded-full flex flex-col items-center justify-start p-2 group-hover:border-opacity-100 transition-all duration-300">
+          <div className="w-1 h-3 bg-accent rounded-full animate-pulse group-hover:h-4 transition-all duration-300"></div>
         </div>
-        <p className="text-xs text-muted mt-2 font-medium">Role para baixo</p>
-      </div>
+        <p className="text-accent text-xs mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+          Role para baixo
+        </p>
+      </a>
 
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">

@@ -1,0 +1,21 @@
+{
+  "short_name": "Lucas Gabriel",
+  "name": "Lucas Gabriel - Desenvolvedor Full Stack",
+  "description": "Portfolio de Lucas Gabriel, desenvolvedor Full Stack especializado em PHP, Node.js, React e MySQL",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1e40af",
+  "background_color": "#0f0f23",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "categories": ["business", "portfolio", "developer"],
+  "prefer_related_applications": false
+} 
