@@ -14,7 +14,7 @@ Olá! Sou **Lucas Gabriel**, um desenvolvedor Full Stack de 18 anos, especializa
 🔥 **Atualmente disponível para oportunidades de trabalho**
 
 ### 🌟 Destaques
-- ✅ **5+ projetos** em produção com clientes reais
+- ✅ **5+ projetos** concluídos
 - ✅ Experiência com **APIs RESTful** e autenticação JWT
 - ✅ Desenvolvimento de **dashboards administrativos**
 - ✅ Especialista em **PHP**, **Node.js** e **React**
@@ -91,19 +91,6 @@ Website moderno e responsivo para empresa de consultoria em logística, com desi
 
 ---
 
-## 📊 Estatísticas GitHub
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=purpesy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=purpesy&layout=compact&langs_count=7&theme=tokyonight"/>
-</div>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=purpesy&theme=tokyonight" alt="GitHub Streak" />
-</div>
-
----
-
 ## 🎯 Processo de Trabalho
 
 1. **🔍 Briefing** - Entendimento completo do projeto
@@ -136,9 +123,9 @@ npm start
 <div align="center">
   
 [![Portfolio](https://img.shields.io/badge/-🌐%20Portfólio%20Completo-06B6D4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lucasgabriel-portfolio.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-gabriel-5301b2331)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-dev-gabriel/)
 [![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucasgabrieldossantos753@gmail.com)
-[![WhatsApp](https://img.shields.io/badge/-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5511999999999)
+[![WhatsApp](https://img.shields.io/badge/-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5511977134857)
 
 </div>
 
@@ -177,7 +164,7 @@ Hello! I'm **Lucas Gabriel**, an 18-year-old Full Stack developer specialized in
 🔥 **Currently available for job opportunities**
 
 ### 🌟 Highlights
-- ✅ **5+ projects** in production with real clients
+- ✅ **5+ projects** concluded
 - ✅ Experience with **RESTful APIs** and JWT authentication
 - ✅ Development of **administrative dashboards**
 - ✅ Expert in **PHP**, **Node.js** and **React**
@@ -254,19 +241,6 @@ Modern and responsive website for logistics consulting company, with professiona
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=purpesy&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=purpesy&layout=compact&langs_count=7&theme=tokyonight"/>
-</div>
-
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=purpesy&theme=tokyonight" alt="GitHub Streak" />
-</div>
-
----
-
 ## 🎯 Work Process
 
 1. **🔍 Briefing** - Complete project understanding
@@ -299,9 +273,9 @@ npm start
 <div align="center">
   
 [![Portfolio](https://img.shields.io/badge/-🌐%20Complete%20Portfolio-06B6D4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://lucasgabriel-portfolio.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-gabriel-5301b2331)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-dev-gabriel)
 [![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucasgabrieldossantos753@gmail.com)
-[![WhatsApp](https://img.shields.io/badge/-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5511999999999)
+[![WhatsApp](https://img.shields.io/badge/-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5511977134857)
 
 </div>
 
