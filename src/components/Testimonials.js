@@ -12,6 +12,7 @@ const Testimonials = () => {
       avatar: '👩‍💼',
       rating: 5,
       text: 'João transformou nossa visão em realidade! O site ficou exatamente como imaginávamos, com um design moderno e funcionalidades incríveis. Recomendo totalmente seu trabalho.',
+      gradient: 'from-accent-blue to-accent-purple'
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ const Testimonials = () => {
       avatar: '👨‍💻',
       rating: 5,
       text: 'Profissional excepcional! Entregou o projeto no prazo, com qualidade superior e sempre disponível para ajustar detalhes. Nosso e-commerce nunca funcionou tão bem.',
+      gradient: 'from-accent-purple to-accent-green'
     },
     {
       id: 3,
@@ -30,6 +32,7 @@ const Testimonials = () => {
       avatar: '👩‍🎨',
       rating: 5,
       text: 'Desenvolver meu site com o João foi a melhor decisão! Ele entendeu perfeitamente minha marca e criou algo único. As vendas online aumentaram 300% depois do lançamento.',
+      gradient: 'from-accent-green to-accent-blue'
     },
     {
       id: 4,
@@ -39,6 +42,7 @@ const Testimonials = () => {
       avatar: '👨‍💼',
       rating: 5,
       text: 'Conhecimento técnico impressionante e atenção aos detalhes. João desenvolveu nossa API com excelência e sempre sugeriu melhorias que agregaram muito valor ao projeto.',
+      gradient: 'from-accent-blue to-accent-green'
     },
     {
       id: 5,
@@ -48,6 +52,7 @@ const Testimonials = () => {
       avatar: '👩‍🏫',
       rating: 5,
       text: 'Plataforma de ensino online ficou perfeita! Interface intuitiva, recursos avançados e suporte contínuo. Nossos alunos adoraram a nova experiência de aprendizado.',
+      gradient: 'from-accent-purple to-accent-blue'
     }
   ];
 
@@ -72,56 +77,65 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <h2 className="section-title">O Que Dizem Meus Clientes</h2>
+    <section className="py-20 bg-bg-primary relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0">
+        <div className="absolute top-32 right-16 w-64 h-64 bg-accent-blue bg-opacity-5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 left-16 w-64 h-64 bg-accent-purple bg-opacity-5 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <h2 className="section-title fade-in-up">O Que Dizem Meus Clientes</h2>
         
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-          A satisfação dos meus clientes é minha maior recompensa. Confira alguns depoimentos 
+        <p className="text-center text-secondary max-w-3xl mx-auto mb-16 text-lg fade-in-up">
+          A <span className="text-accent font-semibold">satisfação dos meus clientes</span> é minha maior recompensa. Confira alguns depoimentos 
           de quem já trabalhou comigo e teve resultados incríveis.
         </p>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Main Testimonial */}
-          <div className="bg-white rounded-lg shadow-xl p-8 md:p-12 relative overflow-hidden">
+          <div className="card border-gradient glow-on-hover relative overflow-hidden fade-in-up">
+            {/* Background gradient */}
+            <div className={`absolute inset-0 bg-gradient-to-br ${testimonials[currentTestimonial].gradient} opacity-5`}></div>
+            
             {/* Quote Icon */}
-            <div className="absolute top-4 left-4 text-6xl text-primary opacity-10">
+            <div className="absolute top-6 left-6 text-6xl text-accent opacity-20">
               "
             </div>
             
-            <div className="relative z-10">
+            <div className="relative z-10 p-8 md:p-12">
               {/* Stars */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-8">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, index) => (
-                  <svg
+                  <div
                     key={index}
-                    className="w-6 h-6 text-accent fill-current"
-                    viewBox="0 0 24 24"
+                    className="w-6 h-6 mx-1 text-accent animate-pulse"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63L2 9.24l5.46 4.73L5.82 21z" />
-                  </svg>
+                    ⭐
+                  </div>
                 ))}
               </div>
 
               {/* Testimonial Text */}
-              <blockquote className="text-xl md:text-2xl text-gray-700 text-center leading-relaxed mb-8 font-medium">
+              <blockquote className="text-xl md:text-2xl text-white text-center leading-relaxed mb-8 font-medium">
                 "{testimonials[currentTestimonial].text}"
               </blockquote>
 
               {/* Client Info */}
               <div className="flex items-center justify-center">
                 <div className="flex items-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-2xl mr-4">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${testimonials[currentTestimonial].gradient} bg-opacity-20 rounded-2xl flex items-center justify-center text-2xl mr-4 border border-white border-opacity-10`}>
                     {testimonials[currentTestimonial].avatar}
                   </div>
                   <div className="text-left">
-                    <h4 className="font-bold text-gray-800 text-lg">
+                    <h4 className="font-bold text-white text-lg">
                       {testimonials[currentTestimonial].name}
                     </h4>
-                    <p className="text-gray-600">
+                    <p className="text-secondary">
                       {testimonials[currentTestimonial].role}
                     </p>
-                    <p className="text-primary font-medium">
+                    <p className="text-accent font-medium">
                       {testimonials[currentTestimonial].company}
                     </p>
                   </div>
@@ -132,35 +146,35 @@ const Testimonials = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors duration-300"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-20 hover:scale-110 transition-all duration-300"
               aria-label="Depoimento anterior"
             >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
 
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors duration-300"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-20 hover:scale-110 transition-all duration-300"
               aria-label="Próximo depoimento"
             >
-              <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-8 space-x-3">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`transition-all duration-300 rounded-full ${
                   index === currentTestimonial
-                    ? 'bg-primary w-8'
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? 'w-8 h-3 bg-gradient-to-r from-accent-blue to-accent-purple'
+                    : 'w-3 h-3 bg-white bg-opacity-30 hover:bg-opacity-50'
                 }`}
                 aria-label={`Ir para depoimento ${index + 1}`}
               />
@@ -172,39 +186,79 @@ const Testimonials = () => {
             {testimonials.slice(0, 3).map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="card hover:scale-105 transition-all duration-300 glow-on-hover fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-lg mr-3">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${testimonial.gradient} bg-opacity-20 rounded-2xl flex items-center justify-center text-lg mr-3 border border-white border-opacity-10`}>
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.company}</p>
+                    <h4 className="font-bold text-white">{testimonial.name}</h4>
+                    <p className="text-sm text-muted">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-secondary text-sm leading-relaxed">
                   "{testimonial.text.substring(0, 100)}..."
                 </p>
+                <div className="flex mt-3">
+                  {[...Array(testimonial.rating)].map((_, starIndex) => (
+                    <span key={starIndex} className="text-accent text-sm">⭐</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="mt-20 fade-in-up">
+          <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {[
+              { number: '98%', label: 'Clientes Satisfeitos', icon: '😊' },
+              { number: '24h', label: 'Tempo de Resposta', icon: '⚡' },
+              { number: '10+', label: 'Projetos Entregues', icon: '🚀' },
+              { number: '100%', label: 'Suporte Contínuo', icon: '🛠️' }
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl mb-2">{stat.icon}</div>
+                <div className="text-3xl font-bold text-gradient mb-1">{stat.number}</div>
+                <div className="text-muted text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">
-            Quer ser o próximo cliente satisfeito?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Entre em contato e vamos conversar sobre como posso ajudar seu negócio a crescer.
-          </p>
-          <a
-            href="#contato"
-            className="btn-primary inline-block"
-          >
-            Começar Meu Projeto
-          </a>
+        <div className="text-center mt-16 fade-in-up">
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Quer ser o próximo cliente satisfeito?
+            </h3>
+            <p className="text-secondary mb-8 text-lg">
+              Entre em contato e vamos conversar sobre como posso ajudar seu negócio a crescer.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#contato"
+                className="btn-primary hover:scale-105 transition-transform duration-300"
+              >
+                <span className="flex items-center gap-2">
+                  <span>Iniciar Projeto</span>
+                  <span>💼</span>
+                </span>
+              </a>
+              <a
+                href="#portfolio"
+                className="btn-secondary hover:scale-105 transition-transform duration-300"
+              >
+                <span className="flex items-center gap-2">
+                  <span>Ver Portfolio</span>
+                  <span>👀</span>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

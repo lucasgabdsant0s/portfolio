@@ -56,7 +56,7 @@ const Contact = () => {
     if (email && !isValidEmail(email)) {
       e.target.style.borderColor = '#ef4444';
     } else {
-      e.target.style.borderColor = '#d1d5db';
+      e.target.style.borderColor = 'var(--border-color)';
     }
   };
 
@@ -69,46 +69,62 @@ const Contact = () => {
       icon: '📧',
       title: 'Email',
       content: 'lucasgabdsantos@gmail.com',
-      link: 'mailto:lucasgabdsantos@gmail.com'
+      link: 'mailto:lucasgabdsantos@gmail.com',
+      gradient: 'from-accent-blue to-accent-purple'
     },
     {
       icon: '📱',
       title: 'Telefone',
       content: '+55 (11) 97713-4857',
       link: 'tel:+5511977134857',
+      gradient: 'from-accent-purple to-accent-green'
     },
     {
       icon: '📍',
       title: 'Localização',
       content: 'São Paulo, SP - Brasil',
-      link: '#'
+      link: '#',
+      gradient: 'from-accent-green to-accent-blue'
     },
     {
       icon: '💼',
       title: 'LinkedIn',
       content: '/in/lucas-dev-gabriel',
-      link: 'https://linkedin.com/in/lucas-dev-gabriel/'
+      link: 'https://linkedin.com/in/lucas-dev-gabriel/',
+      gradient: 'from-accent-blue to-accent-green'
     }
   ];
 
   return (
-    <section id="contato" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <h2 className="section-title">Entre em Contato</h2>
+    <section id="contato" className="py-20 bg-bg-secondary relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0">
+        <div className="absolute top-32 left-16 w-64 h-64 bg-accent-blue bg-opacity-5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 right-16 w-64 h-64 bg-accent-purple bg-opacity-5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-accent-green bg-opacity-3 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <h2 className="section-title fade-in-up">Entre em Contato</h2>
         
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
+        <p className="text-center text-secondary max-w-3xl mx-auto mb-16 text-lg fade-in-up">
           Pronto para transformar sua ideia em realidade? Entre em contato comigo e vamos 
-          conversar sobre seu próximo projeto. Respondo em até 24 horas!
+          conversar sobre seu próximo projeto. <span className="text-accent font-semibold">Respondo em até 24 horas!</span>
         </p>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-8 fade-in-left">
             <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                Vamos Conversar
+              <div className="mb-6">
+                <span className="inline-block px-4 py-2 bg-accent-blue bg-opacity-10 text-accent-blue rounded-full text-sm font-medium mb-4">
+                  💬 Vamos Conversar
+                </span>
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-6">
+                Transforme Sua <span className="text-gradient">Ideia</span> em Realidade
               </h3>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-secondary leading-relaxed mb-8 text-lg">
                 Estou sempre aberto a discutir novos projetos, oportunidades criativas 
                 ou parcerias. Se você tem uma ideia em mente, não hesite em entrar em contato!
               </p>
@@ -120,15 +136,15 @@ const Contact = () => {
                 <a
                   key={index}
                   href={info.link}
-                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 group"
+                  className="card group hover:scale-105 transition-all duration-300 glow-on-hover"
                 >
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white text-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className={`w-14 h-14 bg-gradient-to-br ${info.gradient} bg-opacity-20 rounded-2xl flex items-center justify-center text-2xl mr-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 border border-white border-opacity-10`}>
                       {info.icon}
                     </div>
                     <div>
-                      <h4 className="font-bold text-gray-800">{info.title}</h4>
-                      <p className="text-gray-600 text-sm">{info.content}</p>
+                      <h4 className="font-bold text-white group-hover:text-accent transition-colors duration-300">{info.title}</h4>
+                      <p className="text-muted text-sm group-hover:text-secondary transition-colors duration-300">{info.content}</p>
                     </div>
                   </div>
                 </a>
@@ -136,17 +152,20 @@ const Contact = () => {
             </div>
 
             {/* Social Media */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="font-bold text-gray-800 mb-4">Me Siga nas Redes</h4>
+            <div className="card">
+              <h4 className="font-bold text-white mb-6 flex items-center gap-2">
+                <span>🌐</span>
+                Me Siga nas Redes Sociais
+              </h4>
               <div className="flex space-x-4">
                 {[
-                  { name: 'GitHub', icon: '🐙', link: 'https://github.com/purpesy/' },
-                  { name: 'LinkedIn', icon: '💼', link: 'https://linkedin.com/in/lucas-dev-gabriel/' }
+                  { name: 'GitHub', icon: '🐙', link: 'https://github.com/purpesy/', color: 'from-accent-blue to-accent-purple' },
+                  { name: 'LinkedIn', icon: '💼', link: 'https://linkedin.com/in/lucas-dev-gabriel/', color: 'from-accent-purple to-accent-green' }
                 ].map((social, index) => (
                   <a
                     key={index}
                     href={social.link}
-                    className="w-12 h-12 bg-gray-100 hover:bg-primary hover:text-white rounded-lg flex items-center justify-center text-xl transition-all duration-300 hover:scale-110"
+                    className={`w-12 h-12 bg-gradient-to-r ${social.color} bg-opacity-20 hover:bg-opacity-30 rounded-2xl flex items-center justify-center text-xl transition-all duration-300 hover:scale-110 hover:rotate-6 border border-white border-opacity-10 hover:border-opacity-30`}
                     title={social.name}
                   >
                     {social.icon}
@@ -154,17 +173,32 @@ const Contact = () => {
                 ))}
               </div>
             </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4">
+              {[
+                { number: '24h', label: 'Tempo de Resposta' },
+                { number: '100%', label: 'Satisfação' },
+                { number: '10+', label: 'Projetos Entregues' }
+              ].map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl font-bold text-gradient">{stat.number}</div>
+                  <div className="text-muted text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+          <div className="card border-gradient glow-on-hover fade-in-right">
+            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+              <span>✉️</span>
               Envie uma Mensagem
             </h3>
 
             {/* Success Message */}
             {showSuccessMessage && (
-              <div className="bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg mb-6 animate-pulse">
+              <div className="bg-accent-green bg-opacity-10 border border-accent-green border-opacity-30 text-accent-green px-6 py-4 rounded-lg mb-6 backdrop-blur-sm">
                 <div className="flex items-center">
                   <span className="text-2xl mr-3">✅</span>
                   <div>
@@ -183,7 +217,7 @@ const Contact = () => {
             >
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                  <label htmlFor="name" className="block text-white font-medium mb-2">
                     Nome *
                   </label>
                   <input
@@ -192,12 +226,12 @@ const Contact = () => {
                     name="name"
                     onInput={handleNameChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm"
                     placeholder="Seu nome completo"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                  <label htmlFor="email" className="block text-white font-medium mb-2">
                     Email *
                   </label>
                   <input
@@ -206,83 +240,114 @@ const Contact = () => {
                     name="email"
                     onInput={handleEmailChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm"
                     placeholder="seu@email.com"
                   />
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    onInput={handlePhoneChange}
-                    maxLength="15"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                    placeholder="(11) 99999-9999"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
-                    Assunto *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
-                  >
-                    <option value="">Selecione um assunto</option>
-                    <option value="website">Desenvolvimento de Website</option>
-                    <option value="api">API/Backend</option>
-                    <option value="manutencao">Manutenção de Sistema</option>
-                    <option value="other">Outro</option>
-                  </select>
-                </div>
+              <div>
+                <label htmlFor="phone" className="block text-white font-medium mb-2">
+                  Telefone
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  onInput={handlePhoneChange}
+                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm"
+                  placeholder="(11) 99999-9999"
+                />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                <label htmlFor="subject" className="block text-white font-medium mb-2">
+                  Assunto *
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm"
+                  placeholder="Sobre o que você gostaria de conversar?"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-white font-medium mb-2">
                   Mensagem *
                 </label>
                 <textarea
                   id="message"
                   name="message"
+                  rows="5"
                   required
-                  rows="6"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
-                  placeholder="Conte-me sobre seu projeto, prazos, orçamento e qualquer detalhe importante..."
+                  className="w-full px-4 py-3 bg-bg-tertiary bg-opacity-50 border border-border-color rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 text-white placeholder-muted backdrop-blur-sm resize-none"
+                  placeholder="Descreva seu projeto ou dúvida em detalhes..."
                 ></textarea>
               </div>
 
-              {/* FormSubmit hidden fields */}
-              <input type="hidden" name="_next" value={`${window.location.origin}${window.location.pathname}?sent=true#contato`} />
-              <input type="hidden" name="_subject" value="Nova mensagem do Portfolio!" />
+              {/* Form Fields Hidden */}
+              <input type="hidden" name="_subject" value="Novo contato do portfolio!" />
+              <input type="hidden" name="_next" value={`${window.location.origin}${window.location.pathname}?sent=true`} />
               <input type="hidden" name="_captcha" value="false" />
-              <input type="text" name="_honey" style={{display: 'none'}} />
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-300 ${
-                  isSubmitting 
-                    ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'bg-primary hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-1'
-                }`}
+                className={`w-full btn-primary text-lg font-semibold py-4 ${
+                  isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'
+                } transition-all duration-300`}
               >
-                {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+                <span className="flex items-center justify-center gap-2">
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-bg-primary border-t-transparent rounded-full animate-spin"></div>
+                      <span>Enviando...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Enviar Mensagem</span>
+                      <span>🚀</span>
+                    </>
+                  )}
+                </span>
               </button>
             </form>
+          </div>
+        </div>
 
-            <div className="mt-6 text-center">
-              <p className="text-sm text-gray-500">
-                Seus dados são protegidos e nunca serão compartilhados com terceiros.
-              </p>
+        {/* Call to Action */}
+        <div className="mt-20 text-center fade-in-up">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Prefere uma Conversa Rápida?
+            </h3>
+            <p className="text-secondary mb-8 text-lg">
+              Estou disponível para uma conversa rápida pelo WhatsApp ou uma ligação.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://wa.me/5511977134857"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary hover:scale-105 transition-transform duration-300"
+              >
+                <span className="flex items-center gap-2">
+                  <span>WhatsApp</span>
+                  <span>💬</span>
+                </span>
+              </a>
+              <a
+                href="tel:+5511977134857"
+                className="btn-secondary hover:scale-105 transition-transform duration-300"
+              >
+                <span className="flex items-center gap-2">
+                  <span>Ligar Agora</span>
+                  <span>📞</span>
+                </span>
+              </a>
             </div>
           </div>
         </div>

@@ -21,74 +21,107 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const navItems = [
+    { name: 'Início', href: '#início' },
+    { name: 'Sobre', href: '#sobre' },
+    { name: 'Serviços', href: '#serviços' },
+    { name: 'Habilidades', href: '#habilidades' },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Contato', href: '#contato' }
+  ];
+
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg py-4' : 'bg-transparent py-6'
+    <header className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'glass-effect backdrop-blur-xl py-4 shadow-lg border-b border-white border-opacity-10' 
+        : 'bg-transparent py-6'
     }`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
+        {/* Logo */}
         <div className="text-2xl font-bold">
-          <span className={`transition-colors duration-300 ${
-            isScrolled ? 'text-gray-800' : 'text-white'
-          }`}>
+          <span className="text-gradient hover:scale-105 transition-transform duration-300 cursor-pointer">
             Lucas Gabriel
           </span>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8">
-          {['Início', 'Sobre', 'Serviços', 'Habilidades', 'Portfolio', 'Contato'].map((item) => (
+        <nav className="hidden lg:flex items-center space-x-8">
+          {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className={`font-medium transition-colors duration-300 hover:text-accent ${
-                isScrolled ? 'text-gray-700 hover:text-accent' : 'text-white hover:text-accent'
-              }`}
+              key={item.name}
+              href={item.href}
+              className="relative font-medium text-white hover:text-accent transition-all duration-300 group py-2"
             >
-              {item}
+              {item.name}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-blue to-accent-purple transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
+          
+          {/* CTA Button */}
+          <a
+            href="#contato"
+            className="btn-primary ml-4 hover:scale-105 transform transition-all duration-300"
+          >
+            Vamos Conversar
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 rounded-lg"
+          className="lg:hidden p-2 rounded-lg glass-effect hover:bg-white hover:bg-opacity-20 transition-all duration-300 group"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <svg
-            className={`w-6 h-6 transition-colors duration-300 ${
-              isScrolled ? 'text-gray-800' : 'text-white'
-            }`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+          <div className="w-6 h-6 relative">
+            <span className={`absolute top-0 left-0 w-full h-0.5 bg-white transition-all duration-300 ${
+              isMenuOpen ? 'rotate-45 top-2.5' : ''
+            }`}></span>
+            <span className={`absolute top-2.5 left-0 w-full h-0.5 bg-white transition-all duration-300 ${
+              isMenuOpen ? 'opacity-0' : ''
+            }`}></span>
+            <span className={`absolute top-5 left-0 w-full h-0.5 bg-white transition-all duration-300 ${
+              isMenuOpen ? '-rotate-45 top-2.5' : ''
+            }`}></span>
+          </div>
         </button>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ${
-          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        <div className={`lg:hidden absolute top-full left-0 w-full glass-effect backdrop-blur-xl border-b border-white border-opacity-10 transition-all duration-500 ${
+          isMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'
         }`}>
-          <nav className="flex flex-col py-4">
-            {['Início', 'Sobre', 'Serviços', 'Habilidades', 'Portfolio', 'Contato'].map((item) => (
+          <nav className="flex flex-col py-6 px-6 space-y-4">
+            {navItems.map((item, index) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="px-6 py-3 text-gray-700 hover:text-accent hover:bg-gray-50 transition-colors duration-300"
+                key={item.name}
+                href={item.href}
+                className="text-white hover:text-accent transition-all duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10 fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
                 onClick={closeMenu}
               >
-                {item}
+                {item.name}
               </a>
             ))}
+            
+            <div className="pt-4">
+              <a
+                href="#contato"
+                className="btn-primary w-full text-center block"
+                onClick={closeMenu}
+              >
+                Vamos Conversar
+              </a>
+            </div>
           </nav>
         </div>
       </div>
+
+      {/* Background overlay for mobile menu */}
+      {isMenuOpen && (
+        <div 
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm -z-10"
+          onClick={closeMenu}
+        ></div>
+      )}
     </header>
   );
 };
