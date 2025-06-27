@@ -49,7 +49,7 @@ const Portfolio = () => {
       image: './imgs/evolusom.png',
       gradient: 'from-accent-blue to-accent-purple',
       link: 'https://exemplo.com/evollusom',
-      github: 'https://github.com/usuario/evollusom'
+      github: 'https://github.com/purpesy/Evolusom'
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ const Portfolio = () => {
       image: './imgs/sistemaescola.png',
       gradient: 'from-accent-purple to-accent-green',
       link: 'https://exemplo.com/sistema-escolar',
-      github: 'https://github.com/usuario/sistema-escolar'
+      github: 'https://github.com/purpesy/sistema-escola'
     },
     {
       id: 3,
@@ -71,7 +71,7 @@ const Portfolio = () => {
       image: './imgs/apideuser.png',
       gradient: 'from-accent-blue to-accent-green',
       link: 'https://exemplo.com/api-restful',
-      github: 'https://github.com/usuario/api-restful'
+      github: 'https://github.com/purpesy/api-de-usuarios'
     },
     {
       id: 4,
@@ -81,8 +81,8 @@ const Portfolio = () => {
       technologies: ['HTML', 'CSS', 'PHP', 'MySQL', 'JavaScript', 'TailwindCSS'],
       image: './imgs/visaodeouro.png',
       gradient: 'from-accent-blue to-accent-green',
-      link: 'https://exemplo.com/api-restful',
-      github: 'https://github.com/usuario/api-restful'
+      link: 'https://agenciatipi03.smpsistema.com.br/aluno/lucas/visao-de-ouro/',
+      github: 'https://github.com/purpesy/visao-de-ouro'
     }
   ];
 
@@ -226,6 +226,14 @@ const Portfolio = () => {
 
                   {/* Static Action Buttons */}
                   <div className="flex gap-3">
+                    {project.link.includes('exemplo.com') ? (
+                      <div className="flex-1 bg-gradient-to-r from-amber-600 to-amber-700 text-white text-center py-3 px-4 rounded-lg font-semibold border border-amber-500 flex items-center justify-center gap-2 cursor-not-allowed opacity-75">
+                        <span>Site ainda não disponível</span>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 15.5c-.77.833.192 2.5 1.732 2.5z" />
+                        </svg>
+                      </div>
+                    ) : (
                     <a
                       href={project.link}
                       target="_blank"
@@ -237,6 +245,7 @@ const Portfolio = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </a>
+                    )}
                     <a
                       href={project.github}
                       target="_blank"
