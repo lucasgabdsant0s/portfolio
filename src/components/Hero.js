@@ -68,7 +68,7 @@ const Hero = () => {
                 </span>
               </a>
               <a
-                href="/Curriculo_Lucas_Gabriel.pdf"
+                href="./Curriculo_Lucas_Gabriel.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary px-10 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
