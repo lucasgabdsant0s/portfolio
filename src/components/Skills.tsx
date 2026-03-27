@@ -3,47 +3,38 @@
 import { motion } from "framer-motion";
 import { Layout, ServerCog, HardDrive, Cpu } from "lucide-react";
 
-const skillAreas = [
-  {
-    title: "Criação de Interfaces Interativas",
-    icon: <Layout className="w-6 h-6 text-primary" />,
-    techs: ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-    description: "Desenvolvimento de SPA e SSR com foco em performance, acessibilidade e micro-interações que retêm o usuário e encantam visualmente."
-  },
-  {
-    title: "Arquitetura e Regra de Negócio",
-    icon: <ServerCog className="w-6 h-6 text-accent" />,
-    techs: ["Node.js", "Java", "Spring Boot", "REST APIs", "Clean Architecture"],
-    description: "Backend robusto projetado para não quebrar. Isolamento de domínio e código facilmente testável, manutenível e extensível."
-  },
-  {
-    title: "Modelagem e Dados",
-    icon: <HardDrive className="w-6 h-6 text-blue-500" />,
-    techs: ["PostgreSQL", "MongoDB", "MySQL", "Prisma/ORMs"],
-    description: "Desenho de schemas otimizados para leitura/escrita rápida, garantindo integridade e consistência relacional ou flexibilidade NoSQL."
-  },
-  {
-    title: "Infra, Deploy e DevOps",
-    icon: <Cpu className="w-6 h-6 text-purple-500" />,
-    techs: ["Docker", "Linux Ubuntu", "VPS", "SSH", "Nginx"],
-    description: "Autonomia do começo ao fim. Containers rodando liso em produção com deploys previsíveis e ambientes extremamente seguros na nuvem."
-  }
+const icons = [
+  <Layout key="1" className="w-6 h-6 text-primary" />,
+  <ServerCog key="2" className="w-6 h-6 text-accent" />,
+  <HardDrive key="3" className="w-6 h-6 text-blue-500" />,
+  <Cpu key="4" className="w-6 h-6 text-purple-500" />
 ];
 
+const techsList = [
+  ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
+  ["Node.js", "Java", "Spring Boot", "REST APIs", "Clean Architecture"],
+  ["PostgreSQL", "MongoDB", "MySQL", "Prisma/ORMs"],
+  ["Docker", "Linux Ubuntu", "VPS", "SSH", "Nginx"]
+];
+
+import { useLanguage } from "@/context/LanguageContext";
+
 export function Skills() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-16 md:py-24 px-4 w-full max-w-6xl mx-auto">
       <div className="mb-12 md:mb-16 text-center md:text-left">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
-          Stack de Engenharia
+          {t.skills.title}
         </h2>
         <p className="text-neutral-400 text-lg max-w-2xl">
-          Experiência prática em diferentes camadas do sistema, com foco em entrega e funcionamento em produção.
+          {t.skills.description}
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {skillAreas.map((area, index) => (
+        {t.skills.areas.map((area, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -54,7 +45,7 @@ export function Skills() {
           >
             <div className="flex items-center gap-4 mb-4 md:mb-6">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center justify-center shrink-0">
-                {area.icon}
+                {icons[index]}
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white">{area.title}</h3>
             </div>
@@ -64,7 +55,7 @@ export function Skills() {
             </p>
 
             <div className="flex flex-wrap gap-2">
-              {area.techs.map(tech => (
+              {techsList[index].map(tech => (
                 <span key={tech} className="px-3 py-1 bg-black/40 text-neutral-300 text-xs font-semibold rounded-lg border border-neutral-800/80">
                   {tech}
                 </span>

@@ -4,16 +4,19 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/Button";
 import { GithubIcon } from "./icons";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Projects() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-16 md:py-24 px-4 w-full max-w-6xl mx-auto">
       <div className="mb-12 md:mb-16 text-center md:text-left">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
-          Projetos de Destaque
+          {t.projects.title}
         </h2>
         <p className="text-neutral-400 text-lg max-w-2xl">
-          Projetos desenvolvidos com foco em escalabilidade e resolução de problemas reais.
+          {t.projects.description}
         </p>
       </div>
 
@@ -35,22 +38,22 @@ export function Projects() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-primary"></span>
               </span>
-              Produto Principal
+              {t.projects.orbitra.badge}
             </div>
             
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">Orbitra</h3>
             <p className="text-base sm:text-lg text-neutral-300 font-medium mb-6 leading-relaxed">
-              Sistema completo de gerenciamento de projetos desenvolvido com foco em escalabilidade e arquitetura limpa.
+              {t.projects.orbitra.desc}
             </p>
             
             <div className="space-y-4 mb-8">
               <div>
-                <span className="text-primary font-semibold text-sm uppercase tracking-wider block mb-1">O Desafio Técnico</span>
-                <p className="text-neutral-400">Como manter a consistência e a performance em um sistema multi-user com dezenas de movimentações de tarefas simultâneas?</p>
+                <span className="text-primary font-semibold text-sm uppercase tracking-wider block mb-1">{t.projects.orbitra.challenge_title}</span>
+                <p className="text-neutral-400">{t.projects.orbitra.challenge_desc}</p>
               </div>
               <div>
-                <span className="text-accent font-semibold text-sm uppercase tracking-wider block mb-1">A Solução</span>
-                <p className="text-neutral-400">Arquitetura moderna e escalável focada no domínio corporativo, utilizando Node.js, TypeScript e React, com infraestrutura containerizada via Docker.</p>
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider block mb-1">{t.projects.orbitra.solution_title}</span>
+                <p className="text-neutral-400">{t.projects.orbitra.solution_desc}</p>
               </div>
             </div>
 
@@ -65,7 +68,7 @@ export function Projects() {
             <div className="flex flex-wrap gap-4 mt-auto">
               <a href="https://github.com/lucasgabdsant0s/Orbitra" target="_blank" rel="noreferrer">
                 <Button tabIndex={-1} className="h-12 px-6">
-                  <GithubIcon className="w-4 h-4 mr-2" /> Ver Código no GitHub
+                  <GithubIcon className="w-4 h-4 mr-2" /> {t.projects.orbitra.btn_github}
                 </Button>
               </a>
             </div>

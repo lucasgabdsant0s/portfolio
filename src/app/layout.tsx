@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-
+import { LanguageProvider } from '@/context/LanguageContext';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
@@ -17,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="dark scroll-smooth" suppressHydrationWarning>
       <body suppressHydrationWarning className={`${inter.variable} font-sans antialiased bg-background text-foreground min-h-screen overflow-x-hidden`}>
-        {children}
+        <LanguageProvider>
+          <LanguageSwitcher />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

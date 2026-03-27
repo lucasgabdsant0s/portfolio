@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function About() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-16 md:py-24 px-4 w-full max-w-6xl mx-auto">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -13,26 +16,26 @@ export function About() {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-block px-3 py-1 mb-4 md:mb-6 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm font-semibold tracking-wide">
-            MENTALIDADE DE ENTREGA
+            {t.about.badge}
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground tracking-tight">
-            Aprendo rápido e <br className="hidden sm:block"/> aplico na prática.
+            {t.about.title_1} <br className="hidden sm:block"/> {t.about.title_2}
           </h2>
           <p className="text-neutral-400 text-base md:text-lg mb-6 leading-relaxed">
-            Minha trajetória como Desenvolvedor Full Stack não é apenas sobre concluir tutoriais. É sobre assumir a responsabilidade de colocar projetos reais em produção.
+            {t.about.desc_1}
           </p>
           <p className="text-neutral-400 text-base md:text-lg leading-relaxed mb-8">
-            Enquanto muitos focam apenas em "bater código", meu foco está em <span className="text-neutral-200 font-semibold">construir aplicações estáveis, bem estruturadas e escaláveis</span>. Entendo de infraestrutura, conheço os problemas de deploy e projeto sistemas preparados para o sucesso do negócio.
+            {t.about.desc_2}<span className="text-neutral-200 font-semibold">{t.about.desc_highlight}</span>{t.about.desc_3}
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-neutral-800">
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-              <div className="text-3xl sm:text-4xl font-black text-white mb-2">+100%</div>
-              <div className="text-xs sm:text-sm text-neutral-500 font-medium max-w-[200px] sm:max-w-none">Foco em Solução de Problemas Reais</div>
+              <div className="text-3xl sm:text-4xl font-black text-white mb-2">{t.about.stat_1_val}</div>
+              <div className="text-xs sm:text-sm text-neutral-500 font-medium max-w-[200px] sm:max-w-none">{t.about.stat_1_text}</div>
             </div>
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-              <div className="text-3xl sm:text-4xl font-black text-white mb-2">100%</div>
-              <div className="text-xs sm:text-sm text-neutral-500 font-medium max-w-[200px] sm:max-w-none">Alto comprometimento com qualidade e entrega</div>
+              <div className="text-3xl sm:text-4xl font-black text-white mb-2">{t.about.stat_2_val}</div>
+              <div className="text-xs sm:text-sm text-neutral-500 font-medium max-w-[200px] sm:max-w-none">{t.about.stat_2_text}</div>
             </div>
           </div>
         </motion.div>
@@ -53,7 +56,7 @@ export function About() {
                <span className="text-2xl md:text-3xl">🚀</span>
              </div>
              <blockquote className="text-lg sm:text-xl md:text-2xl font-medium text-neutral-200 italic mb-4 leading-relaxed">
-               "Busco resolver problemas reais com soluções simples, eficientes e escaláveis."
+               {t.about.quote}
              </blockquote>
           </div>
         </motion.div>
