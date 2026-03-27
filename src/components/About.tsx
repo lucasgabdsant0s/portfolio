@@ -16,13 +16,13 @@ export function About() {
             MENTALIDADE DE ENTREGA
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground tracking-tight">
-            Não estou aqui para <br/> aprender o básico.
+            Aprendo rápido e <br/> aplico na prática.
           </h2>
           <p className="text-neutral-400 text-lg mb-6 leading-relaxed">
-            Com apenas 18 anos, minha trajetória como Desenvolvedor Full Stack não é sobre concluir tutoriais. É sobre assumir a responsabilidade de colocar projetos reais em produção.
+            Minha trajetória como Desenvolvedor Full Stack não é apenas sobre concluir tutoriais. É sobre assumir a responsabilidade de colocar projetos reais em produção.
           </p>
           <p className="text-neutral-400 text-lg leading-relaxed mb-8">
-            Enquanto muitos focam apenas em "bater código", meu foco está no <span className="text-neutral-200 font-semibold">seu servidor, na estabilidade da arquitetura e no sucesso do negócio</span>. Entendo de infraestrutura, conheço os problemas de deploy e projeto sistemas preparados para escalar.
+            Enquanto muitos focam apenas em "bater código", meu foco está em <span className="text-neutral-200 font-semibold">construir aplicações estáveis, bem estruturadas e escaláveis</span>. Entendo de infraestrutura, conheço os problemas de deploy e projeto sistemas preparados para o sucesso do negócio.
           </p>
           
           <div className="grid grid-cols-2 gap-6 pt-6 border-t border-neutral-800">
@@ -31,8 +31,8 @@ export function About() {
               <div className="text-sm text-neutral-500 font-medium">Foco em Solução de Problemas Reais</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-white mb-2">24/7</div>
-              <div className="text-sm text-neutral-500 font-medium">Mentalidade de Dono e Disponibilidade</div>
+              <div className="text-4xl font-black text-white mb-2">100%</div>
+              <div className="text-sm text-neutral-500 font-medium">Alto comprometimento com qualidade e entrega</div>
             </div>
           </div>
         </motion.div>
@@ -53,7 +53,7 @@ export function About() {
                <span className="text-3xl">🚀</span>
              </div>
              <blockquote className="text-xl md:text-2xl font-medium text-neutral-200 italic mb-4">
-               "Um desenvolvedor excepcional se mede pela complexidade dos problemas que ele resolve facilmente."
+               "Busco resolver problemas reais com soluções simples, eficientes e escaláveis."
              </blockquote>
           </div>
         </motion.div>

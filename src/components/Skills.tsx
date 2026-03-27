@@ -38,7 +38,7 @@ export function Skills() {
           Stack de Engenharia
         </h2>
         <p className="text-neutral-400 text-lg max-w-2xl">
-          Minha proficiência não se mede por "básico" ou "avançado", mas pela capacidade de entregar soluções eficientes em cada camada do sistema.
+          Experiência prática em diferentes camadas do sistema, com foco em entrega e funcionamento em produção.
         </p>
       </div>
 

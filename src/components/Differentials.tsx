@@ -32,7 +32,7 @@ export function Differentials() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground tracking-tight">
-            Por que eu não sou o típico <br/> <span className="text-accent">desenvolvedor júnior?</span>
+            Diferenciais <span className="text-accent">Técnicos</span>
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
             Essas são as hard skills que me colocam acima da média e garantem que o seu projeto será entregue com qualidade de produção.

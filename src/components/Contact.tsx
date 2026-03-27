@@ -37,7 +37,7 @@ export function Contact() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 blur-[50px] rounded-full pointer-events-none" />
           <h3 className="text-2xl font-bold text-white mb-4">Para Recrutadores</h3>
           <p className="text-neutral-400 mb-8 max-w-md">
-            Buscando um desenvolvedor que já entende de produção, VPS e backend em alto nível para sua equipe?
+            Buscando um desenvolvedor com experiência prática em produção, APIs e infraestrutura para sua equipe?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full">
             <a href="https://www.linkedin.com/in/lucas-dev-gabriel/" target="_blank" rel="noreferrer" className="flex-1">

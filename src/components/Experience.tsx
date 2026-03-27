@@ -14,8 +14,8 @@ const experiences = [
     role: "Desenvolvedor Full Stack",
     company: "Software House",
     period: "Ago 2025 - Presente",
-    description: "Atuo no desenvolvimento, manutenção e evolução de aplicações web em ambiente de alto tráfego de ponta a ponta com Node.js, React, TypeScript e PHP (Laravel). Conduzi projetos internos de testes de performance para APIs RESTful. Executo otimização de queries SQL, correção de bugs críticos, Clean Code e padronização de ambientes via Docker resguardando alta responsabilidade técnica.",
-    impact: "Sucesso na redução do tempo de resposta de endpoints estratégicos de ~900ms para cerca de 94ms."
+    description: "Atuo no desenvolvimento e evolução de aplicações web utilizando Node.js, React, TypeScript e PHP (Laravel). Também participei da padronização de ambientes com Docker, correção de bugs críticos e melhoria de queries SQL.",
+    impact: "Trabalhei na otimização de APIs RESTful, reduzindo o tempo de resposta de endpoints críticos de ~900ms para ~94ms."
   },
   {
     role: "Formação Técnica em TI",
@@ -34,7 +34,7 @@ export function Experience() {
           Experiência Real & Acadêmica
         </h2>
         <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
-          Histórico focado em resultados métricos, arquitetura robusta e impacto em alto tráfego.
+          Histórico focado em resultados mensuráveis e evolução de sistemas em produção.
         </p>
       </div>
 

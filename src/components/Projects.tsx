@@ -13,7 +13,7 @@ export function Projects() {
           Projetos de Destaque
         </h2>
         <p className="text-neutral-400 text-lg max-w-2xl">
-          Arquiteturas que projetei com foco em escalabilidade e desafios técnicos de alto nível para resolver problemas corporativos e técnicos.
+          Projetos desenvolvidos com foco em escalabilidade e resolução de problemas reais.
         </p>
       </div>
 
