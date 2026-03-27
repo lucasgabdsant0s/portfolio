@@ -18,24 +18,24 @@ export function About() {
           <div className="inline-block px-3 py-1 mb-4 md:mb-6 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs md:text-sm font-semibold tracking-wide">
             {t.about.badge}
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-foreground tracking-tight leading-tight">
             {t.about.title_1} <br className="hidden sm:block"/> {t.about.title_2}
           </h2>
-          <p className="text-neutral-400 text-base md:text-lg mb-6 leading-relaxed">
+          <p className="text-neutral-400 text-sm md:text-lg mb-6 leading-relaxed">
             {t.about.desc_1}
           </p>
-          <p className="text-neutral-400 text-base md:text-lg leading-relaxed mb-8">
+          <p className="text-neutral-400 text-sm md:text-lg leading-relaxed mb-8">
             {t.about.desc_2}<span className="text-neutral-200 font-semibold">{t.about.desc_highlight}</span>{t.about.desc_3}
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-neutral-800">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 border-t border-neutral-800">
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-              <div className="text-3xl sm:text-4xl font-black text-white mb-2">{t.about.stat_1_val}</div>
-              <div className="text-xs sm:text-sm text-neutral-500 font-medium max-w-[200px] sm:max-w-none">{t.about.stat_1_text}</div>
+              <div className="text-2xl sm:text-4xl font-black text-white mb-1">{t.about.stat_1_val}</div>
+              <div className="text-[10px] sm:text-sm text-neutral-500 font-medium max-w-[150px] sm:max-w-none uppercase tracking-wider">{t.about.stat_1_text}</div>
             </div>
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-              <div className="text-3xl sm:text-4xl font-black text-white mb-2">{t.about.stat_2_val}</div>
-              <div className="text-xs sm:text-sm text-neutral-500 font-medium max-w-[200px] sm:max-w-none">{t.about.stat_2_text}</div>
+              <div className="text-2xl sm:text-4xl font-black text-white mb-1">{t.about.stat_2_val}</div>
+              <div className="text-[10px] sm:text-sm text-neutral-500 font-medium max-w-[150px] sm:max-w-none uppercase tracking-wider">{t.about.stat_2_text}</div>
             </div>
           </div>
         </motion.div>

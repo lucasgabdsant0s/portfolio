@@ -10,12 +10,12 @@ export function Projects() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-24 px-4 w-full max-w-6xl mx-auto">
+    <section className="py-16 md:py-24 px-6 w-full max-w-6xl mx-auto overflow-hidden">
       <div className="mb-12 md:mb-16 text-center md:text-left">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight leading-tight">
           {t.projects.title}
         </h2>
-        <p className="text-neutral-400 text-lg max-w-2xl">
+        <p className="text-neutral-400 text-sm sm:text-lg max-w-2xl leading-relaxed">
           {t.projects.description}
         </p>
       </div>
@@ -27,13 +27,13 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative rounded-3xl bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col lg:flex-row group"
+          className="relative rounded-2xl md:rounded-3xl bg-neutral-900 border border-neutral-800 overflow-hidden flex flex-col lg:flex-row group"
         >
           {/* Subtle Glow inside the card */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[100px] rounded-full pointer-events-none transition-opacity opacity-0 group-hover:opacity-100" />
           
-          <div className="p-6 sm:p-8 lg:p-12 flex-1 relative z-10 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold w-fit">
+          <div className="p-5 sm:p-8 lg:p-12 flex-1 relative z-10 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-primary/10 text-primary text-[10px] sm:text-sm font-semibold w-fit">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-primary"></span>
@@ -41,8 +41,8 @@ export function Projects() {
               {t.projects.orbitra.badge}
             </div>
             
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">Orbitra</h3>
-            <p className="text-base sm:text-lg text-neutral-300 font-medium mb-6 leading-relaxed">
+            <h3 className="text-xl sm:text-3xl md:text-4xl font-bold text-white mb-2 md:mb-4 tracking-tight">Orbitra</h3>
+            <p className="text-sm sm:text-lg text-neutral-300 font-medium mb-6 leading-relaxed">
               {t.projects.orbitra.desc}
             </p>
             
