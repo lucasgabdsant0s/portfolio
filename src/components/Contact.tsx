@@ -20,9 +20,11 @@ export function Contact() {
           <p className="text-neutral-400 mb-8 max-w-md">
             Precisa transformar sua ideia em um sistema real, rápido e escalável? Vamos conversar sobre as regras do seu negócio e infraestrutura.
           </p>
-          <Button className="w-full sm:w-auto h-14 px-8 text-base shadow-[0_0_20px_rgba(59,130,246,0.3)]">
-            <MessageSquare className="w-5 h-5 mr-3" /> Chamar no WhatsApp
-          </Button>
+          <a href="https://wa.me/5511977134857" target="_blank" rel="noreferrer">
+            <Button tabIndex={-1} className="w-full sm:w-auto h-14 px-8 text-base shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+              <MessageSquare className="w-5 h-5 mr-3" /> Chamar no WhatsApp
+            </Button>
+          </a>
         </motion.div>
 
         <motion.div

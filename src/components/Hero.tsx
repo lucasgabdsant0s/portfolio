@@ -55,9 +55,11 @@ export function Hero() {
             Ver Portfólio
             <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button variant="outline" className="text-lg h-14 px-10 bg-neutral-900/50 hover:bg-neutral-800 text-white font-medium">
-            Falar no WhatsApp
-          </Button>
+          <a href="https://wa.me/5511977134857" target="_blank" rel="noreferrer">
+            <Button tabIndex={-1} variant="outline" className="text-lg h-14 px-10 bg-neutral-900/50 hover:bg-neutral-800 text-white font-medium w-full sm:w-auto">
+              Falar no WhatsApp
+            </Button>
+          </a>
         </div>
       </motion.div>
     </section>
