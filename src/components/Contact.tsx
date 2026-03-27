@@ -38,12 +38,16 @@ export function Contact() {
             Buscando um desenvolvedor que já entende de produção, VPS e backend em alto nível para sua equipe?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full">
-            <Button variant="secondary" className="flex-1 h-14 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
-              <LinkedinIcon className="w-5 h-5 mr-3" /> LinkedIn
-            </Button>
-            <Button variant="outline" className="flex-1 h-14">
-              <Mail className="w-5 h-5 mr-3" /> E-mail
-            </Button>
+            <a href="https://www.linkedin.com/in/lucas-dev-gabriel/" target="_blank" rel="noreferrer" className="flex-1">
+              <Button variant="secondary" className="w-full h-14 shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+                <LinkedinIcon className="w-5 h-5 mr-3" /> LinkedIn
+              </Button>
+            </a>
+            <a href="mailto:lucasgabdsantos@gmail.com" className="flex-1">
+              <Button variant="outline" className="w-full h-14">
+                <Mail className="w-5 h-5 mr-3" /> E-mail
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>
@@ -54,7 +58,7 @@ export function Contact() {
           <a href="https://github.com/lucasgabdsant0s" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
             <GithubIcon className="w-6 h-6" />
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/lucas-dev-gabriel/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
             <LinkedinIcon className="w-6 h-6" />
           </a>
         </div>

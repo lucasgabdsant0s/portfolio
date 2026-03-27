@@ -63,9 +63,11 @@ export function Projects() {
             </div>
 
             <div className="flex flex-wrap gap-4 mt-auto">
-              <Button className="h-12 px-6">
-                <GithubIcon className="w-4 h-4 mr-2" /> Ver Código no GitHub
-              </Button>
+              <a href="https://github.com/lucasgabdsant0s/Orbitra" target="_blank" rel="noreferrer">
+                <Button tabIndex={-1} className="h-12 px-6">
+                  <GithubIcon className="w-4 h-4 mr-2" /> Ver Código no GitHub
+                </Button>
+              </a>
             </div>
           </div>
 
