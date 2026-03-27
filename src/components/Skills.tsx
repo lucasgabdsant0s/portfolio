@@ -32,9 +32,9 @@ const skillAreas = [
 
 export function Skills() {
   return (
-    <section className="py-24 px-4 w-full max-w-6xl mx-auto">
-      <div className="mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
+    <section className="py-16 md:py-24 px-4 w-full max-w-6xl mx-auto">
+      <div className="mb-12 md:mb-16 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
           Stack de Engenharia
         </h2>
         <p className="text-neutral-400 text-lg max-w-2xl">
@@ -50,16 +50,16 @@ export function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="p-8 bg-neutral-900 border border-neutral-800 rounded-3xl hover:border-neutral-700 hover:bg-neutral-800/50 transition-colors"
+            className="p-6 md:p-8 bg-neutral-900 border border-neutral-800 rounded-2xl md:rounded-3xl hover:border-neutral-700 hover:bg-neutral-800/50 transition-colors"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center justify-center">
+            <div className="flex items-center gap-4 mb-4 md:mb-6">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-neutral-950 border border-neutral-800 flex items-center justify-center shrink-0">
                 {area.icon}
               </div>
-              <h3 className="text-xl font-bold text-white">{area.title}</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-white">{area.title}</h3>
             </div>
             
-            <p className="text-neutral-400 mb-6 text-sm leading-relaxed">
+            <p className="text-neutral-400 mb-5 md:mb-6 text-sm leading-relaxed">
               {area.description}
             </p>
 

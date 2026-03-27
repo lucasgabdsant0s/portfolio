@@ -28,9 +28,9 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section className="py-24 px-4 w-full max-w-5xl mx-auto">
-      <div className="mb-16 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
+    <section className="py-16 md:py-24 px-4 w-full max-w-5xl mx-auto">
+      <div className="mb-12 md:mb-16 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight leading-tight">
           Experiência Real & Acadêmica
         </h2>
         <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
@@ -38,7 +38,7 @@ export function Experience() {
         </p>
       </div>
 
-      <div className="relative border-l border-neutral-800/80 ml-4 md:ml-0">
+      <div className="relative border-l-2 border-neutral-800/80 ml-3 md:ml-0 md:pl-8">
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
@@ -46,14 +46,14 @@ export function Experience() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="mb-12 ml-8 md:ml-12 relative"
+            className="mb-12 ml-6 md:ml-4 relative"
           >
-            <span className="absolute -left-[41px] md:-left-[57px] top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary ring-4 ring-[#0f111a]" />
-            <div className="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
-              <h3 className="text-2xl font-bold text-white tracking-tight">{exp.role}</h3>
-              <span className="text-primary font-medium bg-primary/10 px-3 py-1 rounded-full text-sm w-fit border border-primary/20">{exp.period}</span>
+            <span className="absolute -left-[35px] md:-left-[58px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary ring-4 ring-[#0f111a]" />
+            <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-tight pr-4">{exp.role}</h3>
+              <span className="text-primary font-medium bg-primary/10 px-3 py-1 rounded-full text-xs sm:text-sm w-fit border border-primary/20 shrink-0">{exp.period}</span>
             </div>
-            <div className="text-neutral-300 font-semibold mb-4 text-lg">{exp.company}</div>
+            <div className="text-neutral-300 font-semibold mb-3 text-base sm:text-lg">{exp.company}</div>
             <p className="text-neutral-400 leading-relaxed mb-6 font-medium">
               {exp.description}
             </p>

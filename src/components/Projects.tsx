@@ -7,9 +7,9 @@ import { GithubIcon } from "./icons";
 
 export function Projects() {
   return (
-    <section className="py-24 px-4 w-full max-w-6xl mx-auto">
-      <div className="mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
+    <section className="py-16 md:py-24 px-4 w-full max-w-6xl mx-auto">
+      <div className="mb-12 md:mb-16 text-center md:text-left">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground tracking-tight">
           Projetos de Destaque
         </h2>
         <p className="text-neutral-400 text-lg max-w-2xl">
@@ -29,17 +29,17 @@ export function Projects() {
           {/* Subtle Glow inside the card */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[100px] rounded-full pointer-events-none transition-opacity opacity-0 group-hover:opacity-100" />
           
-          <div className="p-8 lg:p-12 flex-1 relative z-10 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-primary/10 text-primary text-sm font-semibold w-fit">
+          <div className="p-6 sm:p-8 lg:p-12 flex-1 relative z-10 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold w-fit">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-primary"></span>
               </span>
               Produto Principal
             </div>
             
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Orbitra</h3>
-            <p className="text-lg text-neutral-300 font-medium mb-6 leading-relaxed">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">Orbitra</h3>
+            <p className="text-base sm:text-lg text-neutral-300 font-medium mb-6 leading-relaxed">
               Sistema completo de gerenciamento de projetos desenvolvido com foco em escalabilidade e arquitetura limpa.
             </p>
             
@@ -71,7 +71,7 @@ export function Projects() {
             </div>
           </div>
 
-          <div className="lg:w-[50%] bg-neutral-950 border-l border-neutral-800 relative min-h-[300px] lg:min-h-full p-8 flex items-center justify-center">
+          <div className="lg:w-[50%] bg-neutral-950 border-t lg:border-t-0 lg:border-l border-neutral-800 relative min-h-[250px] sm:min-h-[300px] lg:min-h-full p-6 sm:p-8 flex items-center justify-center">
              {/* Mockup Placeholder */}
              <div className="w-full h-full max-h-[400px] rounded-xl border border-neutral-800 bg-neutral-900 overflow-hidden group-hover:-translate-y-2 transition-transform duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col">
                 <div className="w-full h-10 border-b border-neutral-800 bg-neutral-950 flex items-center px-4 gap-2">

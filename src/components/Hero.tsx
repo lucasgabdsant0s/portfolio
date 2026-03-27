@@ -19,44 +19,44 @@ export function Hero() {
         <h1 className="text-2xl md:text-3xl font-medium text-neutral-300 mb-2 tracking-wide font-mono">
           Lucas Gabriel
         </h1>
-        <h2 className="text-primary font-bold text-lg md:text-xl mb-8 uppercase tracking-widest border border-primary/30 bg-primary/10 px-6 py-2 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+        <h2 className="text-primary font-bold text-xs sm:text-sm md:text-lg lg:text-xl mb-6 md:mb-8 uppercase tracking-widest border border-primary/30 bg-primary/10 px-4 sm:px-6 py-2 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.15)] text-center max-w-[90vw]">
           Foco em Entrega e Produção
         </h2>
 
-        <h3 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-white text-balance leading-tight">
+        <h3 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight mb-4 md:mb-6 text-white text-balance leading-tight">
           Desenvolvedor Full Stack focado em {" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent drop-shadow-lg">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent drop-shadow-lg block sm:inline mt-2 sm:mt-0">
             construir aplicações reais, escaláveis e prontas para produção.
           </span>
         </h3>
 
-        <p className="text-lg md:text-xl text-neutral-300 mb-10 max-w-2xl leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-neutral-300 mb-8 md:mb-10 max-w-2xl leading-relaxed">
           Atuo desde a arquitetura até o deploy, garantindo performance, estabilidade e funcionamento em ambiente real.
         </p>
 
         {/* Proof Checkpoints */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          <div className="flex items-center gap-2 text-sm text-neutral-200 bg-neutral-900/60 px-5 py-2.5 rounded-xl border border-neutral-700/50 shadow-md">
-            <ShieldCheck className="w-5 h-5 text-emerald-400" />
-            <span className="font-medium">Otimização de Performance (900ms para 94ms)</span>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 md:gap-4 mb-10 w-full max-w-md sm:max-w-none">
+          <div className="flex items-center gap-3 text-xs sm:text-sm text-neutral-200 bg-neutral-900/80 px-4 py-3 sm:px-5 sm:py-2.5 rounded-xl border border-neutral-700/50 shadow-md">
+            <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
+            <span className="font-medium text-left">Otimização de Performance (900ms para 94ms)</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-neutral-200 bg-neutral-900/60 px-5 py-2.5 rounded-xl border border-neutral-700/50 shadow-md">
-            <Server className="w-5 h-5 text-blue-400" />
-            <span className="font-medium">Deploy com Docker & Arquitetura Cloud</span>
+          <div className="flex items-center gap-3 text-xs sm:text-sm text-neutral-200 bg-neutral-900/80 px-4 py-3 sm:px-5 sm:py-2.5 rounded-xl border border-neutral-700/50 shadow-md">
+            <Server className="w-5 h-5 text-blue-400 shrink-0" />
+            <span className="font-medium text-left">Deploy com Docker & Arquitetura Cloud</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-neutral-200 bg-neutral-900/60 px-5 py-2.5 rounded-xl border border-neutral-700/50 shadow-md">
-            <Terminal className="w-5 h-5 text-purple-400" />
-            <span className="font-medium">Experiência prática com sistemas em produção (software house)</span>
+          <div className="flex items-center gap-3 text-xs sm:text-sm text-neutral-200 bg-neutral-900/80 px-4 py-3 sm:px-5 sm:py-2.5 rounded-xl border border-neutral-700/50 shadow-md">
+            <Terminal className="w-5 h-5 text-purple-400 shrink-0" />
+            <span className="font-medium text-left">Experiência prática com sistemas em produção</span>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <Button className="group text-lg h-14 px-10 shadow-[0_0_25px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] text-white font-bold">
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0">
+          <Button className="group text-base md:text-lg h-14 px-8 md:px-10 shadow-[0_0_25px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] text-white font-bold w-full sm:w-auto">
             Ver Portfólio
             <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <a href="https://wa.me/5511977134857" target="_blank" rel="noreferrer">
-            <Button tabIndex={-1} variant="outline" className="text-lg h-14 px-10 bg-neutral-900/50 hover:bg-neutral-800 text-white font-medium w-full sm:w-auto">
+          <a href="https://wa.me/5511977134857" target="_blank" rel="noreferrer" className="w-full sm:w-auto">
+            <Button tabIndex={-1} variant="outline" className="text-base md:text-lg h-14 px-8 md:px-10 bg-neutral-900/50 hover:bg-neutral-800 text-white font-medium w-full sm:w-auto">
               Falar no WhatsApp
             </Button>
           </a>

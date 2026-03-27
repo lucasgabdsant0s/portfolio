@@ -28,13 +28,13 @@ const differentials = [
 
 export function Differentials() {
   return (
-    <section className="w-full min-h-screen flex flex-col justify-center py-24 px-4 bg-neutral-900/20 border-y border-neutral-800/50">
+    <section className="w-full min-h-screen flex flex-col justify-center py-16 md:py-24 px-4 bg-neutral-900/20 border-y border-neutral-800/50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-foreground tracking-tight">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-foreground tracking-tight">
             Diferenciais <span className="text-accent">Técnicos</span>
           </h2>
-          <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
+          <p className="text-neutral-400 text-base md:text-lg max-w-2xl mx-auto px-2">
             Essas são as hard skills que me colocam acima da média e garantem que o seu projeto será entregue com qualidade de produção.
           </p>
         </div>
