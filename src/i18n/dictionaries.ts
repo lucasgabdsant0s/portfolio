@@ -50,30 +50,37 @@ export const dict = {
       ]
     },
     experience: {
-      title: "Experiência Real & Acadêmica",
+      title: "Experiência Profissional & Formação",
       description: "Histórico focado em resultados mensuráveis e evolução de sistemas em produção.",
       impact_label: "Impacto & Entregas",
       items: [
         {
-          role: "Engenharia de Software (Estudante)",
-          company: "Faculdade de Engenharia de Software",
-          period: "Jan 2026 - Presente",
-          description: "Aprofundamento em fundamentos de computação, arquitetura de sistemas corporativos e padrões de projeto orientados a negócio.",
-          impact: "Construção de base sólida em engenharia clássica e ecossistema Java."
+          role: "Engenheiro de Software",
+          company: "Empresa Privada",
+          period: "1 ano e 5 meses",
+          description: "Desenvolvimento e manutenção de aplicações web de alto tráfego. Integração de APIs REST (pagamentos, autenticação e webhooks). Criação de novas funcionalidades, correção de bugs e refatorações.",
+          impact: "Containerização com Docker, deploy e gerenciamento em VPS Linux via SSH, e atuação seguindo metodologias ágeis (Scrum e Kanban)."
         },
         {
-          role: "Desenvolvedor Full Stack",
-          company: "Software House",
-          period: "Ago 2025 - Presente",
-          description: "Atuo no desenvolvimento e evolução de aplicações web utilizando Node.js, React, TypeScript e PHP (Laravel). Também participei da padronização de ambientes com Docker, correção de bugs críticos e melhoria de queries SQL.",
-          impact: "Trabalhei na otimização de APIs RESTful, reduzindo o tempo de resposta de endpoints críticos de ~900ms para ~94ms."
+          role: "Desenvolvedor FullStack",
+          company: "ATLAS ERP",
+          period: "2 meses",
+          description: "Desenvolvimento de ERP financeiro multitenant com C# e Next.js cobrindo Tesouraria, Controladoria e FP&A. Criação de novas funcionalidades, correção de bugs e refatorações.",
+          impact: "Containerização com Docker para padronização de ambientes, deploy e gerenciamento em VPS Linux via SSH."
         },
         {
-          role: "Formação Técnica em TI",
-          company: "Curso Técnico de TI",
-          period: "2024 - 2025",
-          description: "Início da base técnica, imersão em bancos de dados, manutenção de infraestrutura e programação estruturada.",
-          impact: "Consolidação da lógica de projeto e desenvolvimento focado em resolução prática."
+          role: "Bacharelado em Engenharia de Software",
+          company: "Ensino Superior (Cursando)",
+          period: "Jan 2026 - Dez 2029",
+          description: "Estudos avançados em desenvolvimento de software, arquitetura de sistemas e engenharia corporativa.",
+          impact: "Construção de uma base sólida em princípios de engenharia clássica e resolução de problemas."
+        },
+        {
+          role: "Técnico em TI para Internet",
+          company: "SENAC",
+          period: "Ago 2024 - Jun 2025",
+          description: "Início da base técnica, com imersão em infraestrutura, redes, bancos de dados, e programação voltada para web e acessibilidade.",
+          impact: "Consolidação da lógica de programação e de tecnologias base para o desenvolvimento Full Stack."
         }
       ]
     },
@@ -172,30 +179,37 @@ export const dict = {
       ]
     },
     experience: {
-      title: "Real & Academic Experience",
+      title: "Professional Experience & Education",
       description: "A track record focused on measurable results and the evolution of production systems.",
       impact_label: "Impact & Deliverables",
       items: [
         {
-          role: "Software Engineering (Student)",
-          company: "Software Engineering Faculty",
-          period: "Jan 2026 - Present",
-          description: "Deepening knowledge in computing fundamentals, enterprise system architecture, and business-oriented design patterns.",
-          impact: "Building a solid foundation in classical engineering and the Java ecosystem."
+          role: "Software Engineer",
+          company: "Private Company",
+          period: "1 year and 5 months",
+          description: "Development and maintenance of high-traffic web applications. Integration of REST APIs including payments, authentication, and webhooks. Created new features, bug fixes, and code refactorings.",
+          impact: "Application containerization with Docker, deployment and management on Linux VPS via SSH, and work under agile methodologies (Scrum and Kanban)."
         },
         {
-          role: "Full Stack Developer",
-          company: "Software House",
-          period: "Aug 2025 - Present",
-          description: "Developing and evolving web applications using Node.js, React, TypeScript, and PHP (Laravel). Also participated in environment standardizations with Docker, critical bug fixes, and SQL query improvements.",
-          impact: "Worked on RESTful API optimization, reducing response times for critical endpoints from ~900ms to ~94ms."
+          role: "Mid-Level Developer",
+          company: "ATLAS ERP",
+          period: "2 months",
+          description: "Developed a multitenant financial ERP utilizing C# and Next.js, covering Treasury, Controllership, and FP&A modules. Built new features and handled bug fixes.",
+          impact: "Standardized environments with Docker containerization, and oversaw project deployment and management on Linux VPS instances via SSH."
         },
         {
-          role: "IT Technical Education",
-          company: "IT Technical Course",
-          period: "2024 - 2025",
-          description: "Began technical foundation, immersion in databases, infrastructure maintenance, and structured programming.",
-          impact: "Consolidation of project logic and development focused on practical resolution."
+          role: "B.S. in Software Engineering",
+          company: "Higher Education Student",
+          period: "Jan 2026 - Dec 2029",
+          description: "Pursuing advanced studies in software development, systems architecture, and enterprise engineering.",
+          impact: "Building a strong technical foundation in classical engineering principles and problem-solving."
+        },
+        {
+          role: "IT Technician for the Internet",
+          company: "SENAC",
+          period: "Aug 2024 - Jun 2025",
+          description: "Technical immersion focused on network infrastructure, database administration, and structured web development.",
+          impact: "Consolidated logic for application building and foundation in Full Stack development technologies."
         }
       ]
     },
