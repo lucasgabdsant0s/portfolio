@@ -59,7 +59,7 @@ export const dict = {
           company: "Empresa Privada",
           period: "1 ano e 5 meses",
           description: "Desenvolvimento e manutenção de aplicações web de alto tráfego. Integração de APIs REST (pagamentos, autenticação e webhooks). Criação de novas funcionalidades, correção de bugs e refatorações.",
-          impact: "Containerização com Docker, deploy e gerenciamento em VPS Linux via SSH, e atuação seguindo metodologias ágeis (Scrum e Kanban)."
+          impact: "Containerização com Docker, deploy e gerenciamento em VPS Linux via SSH, e atuação seguindo metodologias ágeis (Scrum e Kanban). Otimização de query no MySQL com redução de tempo de 904ms para 90ms."
         },
         {
           role: "Desenvolvedor FullStack",
@@ -188,7 +188,7 @@ export const dict = {
           company: "Private Company",
           period: "1 year and 5 months",
           description: "Development and maintenance of high-traffic web applications. Integration of REST APIs including payments, authentication, and webhooks. Created new features, bug fixes, and code refactorings.",
-          impact: "Application containerization with Docker, deployment and management on Linux VPS via SSH, and work under agile methodologies (Scrum and Kanban)."
+          impact: "Application containerization with Docker, deployment and management on Linux VPS via SSH, and work under agile methodologies (Scrum and Kanban). MySQL query optimization reducing response time from 904ms to 90ms."
         },
         {
           role: "Mid-Level Developer",
