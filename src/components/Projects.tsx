@@ -119,7 +119,7 @@ export function Projects() {
                           <div className="w-full h-12 bg-neutral-800/30 rounded-md mt-auto" />
                         </>
                       )}
-                      {key === 'edu' && (
+                      {/* {key === 'edu' && (
                         <div className="flex flex-col items-center gap-4 h-full">
                            <div className="w-full h-32 bg-accent/10 border border-accent/20 rounded-lg flex items-center justify-center">
                               <div className="w-16 h-16 rounded-full bg-accent/20 animate-pulse" />
@@ -141,7 +141,7 @@ export function Projects() {
                            <div className="text-neutral-500">&nbsp;&nbsp;server_name orbitra.app;</div>
                            <div className="text-neutral-500">&#125;</div>
                         </div>
-                      )}
+                      )} */}
                     </div>
                  </div>
               </div>
