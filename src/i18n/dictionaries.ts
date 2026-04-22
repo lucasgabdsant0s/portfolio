@@ -90,19 +90,19 @@ export const dict = {
       areas: [
         {
           title: "Criação de Interfaces Interativas",
-          description: "Desenvolvimento de SPA e SSR com foco em performance, acessibilidade e micro-interações que retêm o usuário e encantam visualmente."
+          description: "React, Next.js, TypeScript e Tailwind CSS. Foco em performance, SEO e UX premium."
         },
         {
-          title: "Arquitetura e Regra de Negócio",
-          description: "Backend robusto projetado para não quebrar. Isolamento de domínio e código facilmente testável, manutenível e extensível."
+          title: "Backend e Regras de Negócio",
+          description: "Node.js, Express, Fastify, C#, Prisma ORM e Arquitetura Limpa (DDD)."
         },
         {
-          title: "Modelagem e Dados",
-          description: "Desenho de schemas otimizados para leitura/escrita rápida, garantindo integridade e consistência relacional ou flexibilidade NoSQL."
+          title: "Bancos de Dados",
+          description: "MySQL, PostgreSQL, SQL Server e MongoDB. Modelagem otimizada e query optimization."
         },
         {
-          title: "Infra, Deploy e DevOps",
-          description: "Autonomia do começo ao fim. Containers rodando liso em produção com deploys previsíveis e ambientes extremamente seguros na nuvem."
+          title: "Infra e DevOps",
+          description: "Docker, Docker Compose, Nginx, Linux (VPS), CI/CD e monitoramento."
         }
       ]
     },
@@ -110,14 +110,47 @@ export const dict = {
       title: "Projetos de Destaque",
       description: "Projetos desenvolvidos com foco em escalabilidade e resolução de problemas reais.",
       orbitra: {
-        badge: "Produto Principal",
-        desc: "Sistema completo de gerenciamento de projetos desenvolvido com foco em escalabilidade e arquitetura limpa.",
+        badge: "Full Stack + Auth",
+        name: "Orbitra",
+        desc: "SaaS de gerenciamento de projetos multitenant com foco em escalabilidade e arquitetura limpa.",
         challenge_title: "O Desafio Técnico",
-        challenge_desc: "Como manter a consistência e a performance em um sistema multi-user com dezenas de movimentações de tarefas simultâneas?",
+        challenge_desc: "Implementar um sistema multi-tenant seguro com isolamento de dados e UX fluida para Kanban.",
         solution_title: "A Solução",
-        solution_desc: "Arquitetura moderna e escalável focada no domínio corporativo, utilizando Node.js, TypeScript e React, com infraestrutura containerizada via Docker.",
-        btn_github: "Ver Código no GitHub"
-      }
+        solution_desc: "Backend Node.js com Clean Architecture, autenticação JWT com Refresh Token e frontend em React 19 com TanStack Query.",
+        btn_github: "Ver Código",
+        btn_live: "Ver Deploy",
+        github_url: "https://github.com/lucasgabdsant0s/Orbitra",
+        live_url: "#",
+        techs: ['Node.js', 'React', 'TypeScript', 'Docker', 'Prisma', 'MySQL']
+      },
+      // edu: {
+      //   badge: "Produto Digital",
+      //   name: "A Criação do Mundo",
+      //   desc: "Landing page de alta conversão para produto digital (E-book cristão) com foco em SEO e performance.",
+      //   challenge_title: "O Desafio",
+      //   challenge_desc: "Criar uma interface persuasiva que garanta carregamento instantâneo em dispositivos móveis.",
+      //   solution_title: "A Solução",
+      //   solution_desc: "Desenvolvimento otimizado com Vanilla CSS e JS, garantindo nota máxima no Lighthouse e foco em conversão.",
+      //   btn_github: "Ver Código",
+      //   btn_live: "Ver Deploy",
+      //   github_url: "https://github.com/lucasgabdsant0s/edu",
+      //   live_url: "#",
+      //   techs: ['HTML5', 'CSS3', 'JavaScript', 'SEO', 'Performance']
+      // },
+      // infra: {
+      //   badge: "DevOps & Infra",
+      //   name: "Infrastructure Showcase",
+      //   desc: "Documentação e automação de setup para VPS Linux utilizando Docker e Nginx Reverse Proxy.",
+      //   challenge_title: "O Desafio",
+      //   challenge_desc: "Configurar um ambiente de produção seguro, resiliente e escalável em servidores Linux.",
+      //   solution_title: "A Solução",
+      //   solution_desc: "Implementação de containers Docker para isolamento, Nginx como proxy reverso com SSL (Certbot) e scripts de automação.",
+      //   btn_github: "Ver Código",
+      //   btn_live: "Documentação",
+      //   github_url: "https://github.com/lucasgabdsant0s/portfolio",
+      //   live_url: "#",
+      //   techs: ['Linux', 'Docker', 'Nginx', 'SSL', 'Bash', 'VPS']
+      // }
     },
     contact: {
       client_title: "Para Clientes ou Projetos",
@@ -218,20 +251,20 @@ export const dict = {
       description: "Practical experience across different system layers, focusing on delivery and production functionality.",
       areas: [
         {
-          title: "Interactive Interface Creation",
-          description: "SPA and SSR development focusing on performance, accessibility, and micro-interactions that retain and visually delight the user."
+          title: "Interactive Interfaces",
+          description: "React, Next.js, TypeScript and Tailwind CSS. Focus on performance, SEO and premium UX."
         },
         {
-          title: "Architecture and Business Logic",
-          description: "Robust backends designed not to break. Domain isolation and easily testable, maintainable, and extensible code."
+          title: "Backend & Business Logic",
+          description: "Node.js, Express, Fastify, C#, Prisma ORM and Clean Architecture (DDD)."
         },
         {
-          title: "Modeling and Data",
-          description: "Design of schemas optimized for fast read/writes, ensuring relational integrity and consistency or NoSQL flexibility."
+          title: "Databases",
+          description: "MySQL, PostgreSQL, SQL Server and MongoDB. Optimized modeling and query optimization."
         },
         {
-          title: "Infra, Deploy and DevOps",
-          description: "Autonomy from start to finish. Containers running smoothly in production with predictable deployments and highly secure cloud environments."
+          title: "Infra & DevOps",
+          description: "Docker, Docker Compose, Nginx, Linux (VPS), CI/CD and monitoring."
         }
       ]
     },
@@ -239,13 +272,46 @@ export const dict = {
       title: "Featured Projects",
       description: "Projects developed with a focus on scalability and solving real-world problems.",
       orbitra: {
-        badge: "Main Product",
-        desc: "Complete project management system built with scalability and clean architecture in mind.",
-        challenge_title: "The Technical Challenge",
-        challenge_desc: "How do you maintain consistency and performance in a multi-user system with dozens of simultaneous task movements?",
+        badge: "Full Stack + Auth",
+        name: "Orbitra",
+        desc: "Multi-tenant SaaS project management system focused on scalability and clean architecture.",
+        challenge_title: "Technical Challenge",
+        challenge_desc: "Implement a secure multi-tenant system with data isolation and fluid UX for Kanban.",
         solution_title: "The Solution",
-        solution_desc: "Modern and scalable architecture focused on the enterprise domain, using Node.js, TypeScript, and React, with containerized infrastructure via Docker.",
-        btn_github: "View Code on GitHub"
+        solution_desc: "Node.js backend with Clean Architecture, JWT auth with Refresh Token, and React 19 frontend with TanStack Query.",
+        btn_github: "View Code",
+        btn_live: "View Deploy",
+        github_url: "https://github.com/lucasgabdsant0s/Orbitra",
+        live_url: "#",
+        techs: ['Node.js', 'React', 'TypeScript', 'Docker', 'Prisma', 'MySQL']
+      },
+      edu: {
+        badge: "Digital Product",
+        name: "The World's Creation",
+        desc: "High-conversion landing page for digital product (Christian E-book) focusing on SEO and performance.",
+        challenge_title: "The Challenge",
+        challenge_desc: "Create a persuasive interface that ensures instant loading on mobile devices.",
+        solution_title: "The Solution",
+        solution_desc: "Optimized development with Vanilla CSS and JS, ensuring maximum Lighthouse score and conversion focus.",
+        btn_github: "View Code",
+        btn_live: "View Deploy",
+        github_url: "https://github.com/lucasgabdsant0s/edu",
+        live_url: "#",
+        techs: ['HTML5', 'CSS3', 'JavaScript', 'SEO', 'Performance']
+      },
+      infra: {
+        badge: "DevOps & Infra",
+        name: "Infrastructure Showcase",
+        desc: "Documentation and setup automation for Linux VPS using Docker and Nginx Reverse Proxy.",
+        challenge_title: "The Challenge",
+        challenge_desc: "Configure a secure, resilient, and scalable production environment on Linux servers.",
+        solution_title: "The Solution",
+        solution_desc: "Implementation of Docker containers for isolation, Nginx as a reverse proxy with SSL (Certbot), and automation scripts.",
+        btn_github: "View Code",
+        btn_live: "Documentation",
+        github_url: "https://github.com/lucasgabdsant0s/portfolio",
+        live_url: "#",
+        techs: ['Linux', 'Docker', 'Nginx', 'SSL', 'Bash', 'VPS']
       }
     },
     contact: {
@@ -258,3 +324,4 @@ export const dict = {
     }
   }
 };
+

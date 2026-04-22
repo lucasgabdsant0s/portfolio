@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
 import { ArrowRight, Terminal, Server, ShieldCheck } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "./icons";
 import { useLanguage } from "@/context/LanguageContext";
 
 export function Hero() {
@@ -54,12 +55,30 @@ export function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-6 sm:px-0">
-          <a href="https://wa.me/5511977134857?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noreferrer" className="w-full sm:w-auto">
+          <a href="#portfolio" className="w-full sm:w-auto">
             <Button className="group text-base md:text-lg h-12 md:h-14 px-8 md:px-10 shadow-[0_0_25px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] text-white font-bold w-full sm:w-auto">
-              {t.hero.btn_whatsapp}
+              {t.hero.btn_portfolio}
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </a>
+          <div className="flex gap-4 w-full sm:w-auto">
+             <a href="https://wa.me/5511977134857?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noreferrer" className="flex-1 sm:flex-initial">
+               <Button variant="outline" className="h-12 md:h-14 px-6 border-neutral-700 hover:border-primary/50 hover:bg-primary/5 w-full">
+                 <ArrowRight className="w-5 h-5 rotate-[-45deg] mr-2" />
+                 {t.hero.btn_whatsapp}
+               </Button>
+             </a>
+             <a href="https://github.com/lucasgabdsant0s" target="_blank" rel="noreferrer" className="flex-none">
+               <Button variant="outline" className="h-12 md:h-14 px-6 border-neutral-700 hover:border-primary/50 hover:bg-primary/5 w-full">
+                 <GithubIcon className="w-5 h-5" />
+               </Button>
+             </a>
+             <a href="https://linkedin.com/in/lucasgabdsant0s" target="_blank" rel="noreferrer" className="flex-none">
+               <Button variant="outline" className="h-12 md:h-14 px-6 border-neutral-700 hover:border-primary/50 hover:bg-primary/5 w-full">
+                 <LinkedinIcon className="w-5 h-5" />
+               </Button>
+             </a>
+          </div>
         </div>
       </motion.div>
     </section>

@@ -11,10 +11,10 @@ const icons = [
 ];
 
 const techsList = [
-  ["React.js", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"],
-  ["Node.js", "Java", "Spring Boot", "REST APIs", "Clean Architecture"],
-  ["PostgreSQL", "MongoDB", "MySQL", "Prisma/ORMs"],
-  ["Docker", "Linux Ubuntu", "VPS", "SSH", "Nginx"]
+  ["React 19", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion", "TanStack Query"],
+  ["Node.js", "Fastify", "Express", "C# / .NET", "REST APIs", "Clean Architecture", "JWT"],
+  ["PostgreSQL", "MySQL", "MongoDB", "SQL Server", "Prisma ORM"],
+  ["Docker", "Docker Compose", "Linux (VPS)", "Nginx", "CI/CD", "SSL / Certbot"]
 ];
 
 import { useLanguage } from "@/context/LanguageContext";
